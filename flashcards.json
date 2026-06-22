@@ -1,0 +1,3002 @@
+[
+  {
+    "id": 1,
+    "chapter": 1,
+    "front": "What was the first FDA-cleared AI-based medical device?",
+    "back": "A neural network for detecting microcalcifications in mammography images, cleared in 1995 by Capmed (later ImageChecker by R2 Technology)."
+  },
+  {
+    "id": 2,
+    "chapter": 1,
+    "front": "What does CDSS stand for in clinical AI?",
+    "back": "Clinical Decision Support System. A CDSS uses algorithms or knowledge bases to assist clinicians in making patient care decisions."
+  },
+  {
+    "id": 3,
+    "chapter": 1,
+    "front": "Which 1959 paper first defined machine learning?",
+    "back": "Arthur Samuel's 1959 paper on checkers programs, which defined machine learning as a field of study that gives computers the ability to learn without being explicitly programmed."
+  },
+  {
+    "id": 4,
+    "chapter": 1,
+    "front": "What landmark 2016 study demonstrated AI matching dermatologist accuracy in skin cancer classification?",
+    "back": "Esteva et al. (2017, Nature) showed a convolutional neural network classified skin lesions with accuracy comparable to 21 board-certified dermatologists using 129,450 clinical images."
+  },
+  {
+    "id": 5,
+    "chapter": 1,
+    "front": "What is the Turing Test in the context of medical AI?",
+    "back": "A test proposed by Alan Turing (1950) in which a machine is considered intelligent if its responses are indistinguishable from a human's; used conceptually in AI to benchmark conversational medical chatbots."
+  },
+  {
+    "id": 6,
+    "chapter": 1,
+    "front": "What is IBM Watson for Oncology, and why did it fall short in clinical deployment?",
+    "back": "IBM Watson for Oncology was an AI system trained on Memorial Sloan Kettering case data to recommend cancer treatments. It fell short because recommendations were based on synthetic training cases rather than real patient outcomes, leading to unsafe suggestions in some cancers."
+  },
+  {
+    "id": 7,
+    "chapter": 1,
+    "front": "What are the three core components of the AI triad in healthcare?",
+    "back": "Data (large clinical datasets), Algorithms (machine learning models), and Computing Power (GPU-based infrastructure). All three must converge for effective medical AI."
+  },
+  {
+    "id": 8,
+    "chapter": 1,
+    "front": "Which year did the FDA issue its first AI/ML-based Software as a Medical Device (SaMD) action plan?",
+    "back": "January 2021. The FDA's AI/ML-Based SaMD Action Plan outlined a regulatory framework for adaptive AI algorithms in medical devices."
+  },
+  {
+    "id": 9,
+    "chapter": 1,
+    "front": "What is 'narrow AI' versus 'general AI' in a medical context?",
+    "back": "Narrow AI performs one specific task (e.g., detecting diabetic retinopathy). General AI would perform any intellectual task a human can; no general AI currently exists in clinical medicine."
+  },
+  {
+    "id": 10,
+    "chapter": 1,
+    "front": "What is the difference between supervised and unsupervised learning in clinical AI?",
+    "back": "Supervised learning trains on labeled data (e.g., images annotated by radiologists). Unsupervised learning finds patterns in unlabeled data (e.g., patient clustering for phenotyping)."
+  },
+  {
+    "id": 11,
+    "chapter": 1,
+    "front": "What is 'AI winter' and why is it relevant to medical AI history?",
+    "back": "AI winters (1970s, late 1980s) were periods of reduced funding and interest due to unmet expectations. They are relevant because hype cycles in medical AI risk similar disillusionment if clinical validation is neglected."
+  },
+  {
+    "id": 12,
+    "chapter": 1,
+    "front": "What did the NEJM 2019 special issue on AI in medicine emphasize?",
+    "back": "It emphasized that AI tools must demonstrate clinical utility in prospective trials, not just retrospective accuracy, before routine clinical deployment."
+  },
+  {
+    "id": 13,
+    "chapter": 1,
+    "front": "What is augmented intelligence as distinguished from artificial intelligence in medicine?",
+    "back": "Augmented intelligence refers to AI that enhances rather than replaces clinician judgment. The AMA formally endorses this framing to emphasize physician oversight and shared decision-making."
+  },
+  {
+    "id": 14,
+    "chapter": 1,
+    "front": "Name three major barriers to AI adoption in healthcare.",
+    "back": "Data silos and interoperability issues, lack of prospective clinical validation, and algorithmic bias from non-representative training populations."
+  },
+  {
+    "id": 15,
+    "chapter": 1,
+    "front": "What is the 'black box' problem in medical AI?",
+    "back": "Many deep learning models cannot explain how they reach a decision, making it difficult for clinicians to understand, trust, or legally defend AI-generated recommendations."
+  },
+  {
+    "id": 16,
+    "chapter": 2,
+    "front": "What is the bias-variance tradeoff in machine learning?",
+    "back": "Bias is error from overly simplistic models (underfitting); variance is error from overly complex models (overfitting). The tradeoff involves finding a model complexity that minimizes total prediction error on new data."
+  },
+  {
+    "id": 17,
+    "chapter": 2,
+    "front": "What is cross-validation and why is it used in clinical model development?",
+    "back": "Cross-validation (e.g., k-fold) partitions data into training and test sets repeatedly to estimate model generalizability. It reduces the risk of overfitting to a single train-test split in small clinical datasets."
+  },
+  {
+    "id": 18,
+    "chapter": 2,
+    "front": "What is the AUC-ROC and what does an AUC of 0.85 mean clinically?",
+    "back": "The AUC-ROC (Area Under the Receiver Operating Characteristic Curve) measures a classifier's discrimination. An AUC of 0.85 means the model correctly ranks a randomly chosen positive case above a negative case 85% of the time."
+  },
+  {
+    "id": 19,
+    "chapter": 2,
+    "front": "What is a random forest and how is it used in risk prediction?",
+    "back": "A random forest is an ensemble of decision trees that each train on random data subsets. In medicine it is used for risk prediction (e.g., 30-day readmission, sepsis) by averaging outputs of many trees to reduce variance."
+  },
+  {
+    "id": 20,
+    "chapter": 2,
+    "front": "What is regularization in machine learning and which two types are most common?",
+    "back": "Regularization adds a penalty for model complexity to prevent overfitting. L1 (Lasso) encourages sparse coefficients; L2 (Ridge) penalizes large coefficients. Both are common in logistic regression models for clinical outcomes."
+  },
+  {
+    "id": 21,
+    "chapter": 2,
+    "front": "What does 'feature engineering' mean in a clinical ML context?",
+    "back": "Feature engineering is the process of transforming raw clinical variables (e.g., lab values, vitals) into informative inputs for an ML model. Examples include creating a shock index from heart rate and systolic BP."
+  },
+  {
+    "id": 22,
+    "chapter": 2,
+    "front": "What is gradient boosting and which library implements it most commonly in healthcare research?",
+    "back": "Gradient boosting builds trees sequentially, each correcting errors of the last. XGBoost is the most widely used implementation in healthcare research due to its speed and performance on tabular clinical data."
+  },
+  {
+    "id": 23,
+    "chapter": 2,
+    "front": "What is the difference between precision and recall in a clinical screening test?",
+    "back": "Precision (positive predictive value) is the fraction of predicted positives that are true positives. Recall (sensitivity) is the fraction of actual positives correctly identified. High recall is prioritized in life-threatening screening (minimize missed cases)."
+  },
+  {
+    "id": 24,
+    "chapter": 2,
+    "front": "What is the F1 score?",
+    "back": "The F1 score is the harmonic mean of precision and recall: 2 x (precision x recall) / (precision + recall). It is useful when class imbalance exists, such as rare disease detection."
+  },
+  {
+    "id": 25,
+    "chapter": 2,
+    "front": "What is data leakage in clinical machine learning and why is it dangerous?",
+    "back": "Data leakage occurs when information from the test set (or future clinical data) inadvertently influences model training, producing overly optimistic performance estimates that fail to replicate in real-world deployment."
+  },
+  {
+    "id": 26,
+    "chapter": 2,
+    "front": "What is a confusion matrix?",
+    "back": "A confusion matrix is a table showing true positives, true negatives, false positives, and false negatives for a classifier. It provides a complete picture of model performance beyond a single accuracy metric."
+  },
+  {
+    "id": 27,
+    "chapter": 2,
+    "front": "What is the difference between parametric and non-parametric machine learning models?",
+    "back": "Parametric models (e.g., logistic regression) have a fixed number of parameters and assume data distribution. Non-parametric models (e.g., k-nearest neighbors, decision trees) make fewer assumptions and grow with data size."
+  },
+  {
+    "id": 28,
+    "chapter": 2,
+    "front": "What is SMOTE and when is it used in clinical AI?",
+    "back": "SMOTE (Synthetic Minority Over-sampling Technique) generates synthetic samples for underrepresented classes. It is used in clinical AI when outcomes of interest are rare (e.g., in-hospital mortality, rare adverse drug events)."
+  },
+  {
+    "id": 29,
+    "chapter": 2,
+    "front": "What is the No Free Lunch theorem and its implication for choosing clinical ML algorithms?",
+    "back": "The No Free Lunch theorem states no single algorithm outperforms all others across every problem. In clinical ML, algorithm selection must be guided by dataset characteristics, outcome type, and interpretability requirements."
+  },
+  {
+    "id": 30,
+    "chapter": 2,
+    "front": "What is Shapley value (SHAP) in the context of interpretable ML for clinicians?",
+    "back": "SHAP (SHapley Additive exPlanations) quantifies each feature's contribution to a model's prediction, derived from cooperative game theory. It helps clinicians understand why an AI flags a patient as high risk."
+  },
+  {
+    "id": 31,
+    "chapter": 3,
+    "front": "What is a convolutional neural network (CNN) and why is it suited for medical imaging?",
+    "back": "A CNN uses convolutional filters to detect local features (edges, textures) in images hierarchically. Its spatial parameter sharing makes it highly effective for tasks like lesion detection in radiology and pathology slides."
+  },
+  {
+    "id": 32,
+    "chapter": 3,
+    "front": "What is transfer learning and how is it applied in medical imaging AI?",
+    "back": "Transfer learning reuses a model pretrained on a large dataset (e.g., ImageNet) and fine-tunes it on smaller medical image datasets. It overcomes the limitation of limited labeled clinical data."
+  },
+  {
+    "id": 33,
+    "chapter": 3,
+    "front": "What is the vanishing gradient problem and which architecture largely solved it?",
+    "back": "In deep networks, gradients shrink as they backpropagate, halting learning in early layers. Residual Networks (ResNets), introduced by He et al. (2016), use skip connections to mitigate this problem."
+  },
+  {
+    "id": 34,
+    "chapter": 3,
+    "front": "What is a recurrent neural network (RNN) and its primary clinical application?",
+    "back": "An RNN processes sequential data by maintaining hidden state across time steps. In medicine, it is used to model longitudinal EHR data, vital sign trends, and time-series ICU data for outcome prediction."
+  },
+  {
+    "id": 35,
+    "chapter": 3,
+    "front": "What is LSTM and how does it improve on standard RNNs?",
+    "back": "Long Short-Term Memory (LSTM) networks use gating mechanisms (input, forget, output gates) to selectively retain or discard long-range temporal dependencies, addressing the vanishing gradient issue in standard RNNs."
+  },
+  {
+    "id": 36,
+    "chapter": 3,
+    "front": "What is a transformer architecture and why did it revolutionize AI in medicine?",
+    "back": "Transformers use self-attention mechanisms to weigh relationships between all input tokens simultaneously. They enabled large language models (GPT, BERT) and vision transformers (ViT) that power modern clinical NLP and imaging AI."
+  },
+  {
+    "id": 37,
+    "chapter": 3,
+    "front": "What is dropout in neural networks and why is it used?",
+    "back": "Dropout randomly deactivates neurons during training to prevent co-adaptation, acting as regularization. It reduces overfitting in deep learning models trained on limited clinical datasets."
+  },
+  {
+    "id": 38,
+    "chapter": 3,
+    "front": "What is batch normalization and what problem does it solve in deep learning?",
+    "back": "Batch normalization normalizes layer inputs across a mini-batch, reducing internal covariate shift. It allows faster training and use of higher learning rates in deep neural networks."
+  },
+  {
+    "id": 39,
+    "chapter": 3,
+    "front": "What is a generative adversarial network (GAN) and its use in medical imaging?",
+    "back": "A GAN consists of a generator and discriminator in adversarial training. In medicine, GANs synthesize realistic medical images (e.g., CT, MRI) to augment training data and overcome dataset scarcity."
+  },
+  {
+    "id": 40,
+    "chapter": 3,
+    "front": "What is the U-Net architecture and what task was it designed for?",
+    "back": "U-Net is an encoder-decoder CNN with skip connections developed for biomedical image segmentation. It excels at delineating organs and tumors in CT, MRI, and histopathology images with limited training data."
+  },
+  {
+    "id": 41,
+    "chapter": 3,
+    "front": "What is attention mechanism in deep learning?",
+    "back": "The attention mechanism allows a model to selectively focus on relevant parts of the input when generating each output. In medical imaging, attention maps highlight diagnostically relevant regions (e.g., tumor focus in a CT scan)."
+  },
+  {
+    "id": 42,
+    "chapter": 3,
+    "front": "What is the activation function ReLU and why is it preferred in deep networks?",
+    "back": "Rectified Linear Unit (ReLU) outputs zero for negative inputs and the input value for positive inputs. It is preferred because it mitigates vanishing gradients and is computationally efficient compared to sigmoid or tanh functions."
+  },
+  {
+    "id": 43,
+    "chapter": 3,
+    "front": "What is ResNet-50 and for what medical imaging benchmark was it widely tested?",
+    "back": "ResNet-50 is a 50-layer residual network. It was widely benchmarked on chest X-ray classification tasks (e.g., CheXNet, ChestX-ray14) and achieved radiologist-level performance in some pneumonia detection studies."
+  },
+  {
+    "id": 44,
+    "chapter": 3,
+    "front": "What is the role of GPUs in training deep learning models for medicine?",
+    "back": "GPUs perform massively parallel matrix operations essential for training deep neural networks. Modern medical AI training uses NVIDIA GPUs (e.g., A100) that reduce training time from weeks to hours compared to CPUs."
+  },
+  {
+    "id": 45,
+    "chapter": 3,
+    "front": "What is data augmentation and why is it critical in medical deep learning?",
+    "back": "Data augmentation applies transformations (rotation, flipping, brightness changes) to training images to artificially increase dataset size and diversity. It reduces overfitting in medical AI where annotated datasets are typically small."
+  },
+  {
+    "id": 46,
+    "chapter": 4,
+    "front": "What is named entity recognition (NER) in clinical NLP?",
+    "back": "NER identifies and classifies clinical entities (diseases, medications, procedures, labs) within free-text clinical notes, enabling structured extraction of information from unstructured EHR data."
+  },
+  {
+    "id": 47,
+    "chapter": 4,
+    "front": "What is cTAKES and what does it do?",
+    "back": "cTAKES (clinical Text Analysis and Knowledge Extraction System) is an open-source NLP pipeline developed by Mayo Clinic that extracts clinical information such as diagnoses, medications, and anatomic sites from clinical notes."
+  },
+  {
+    "id": 48,
+    "chapter": 4,
+    "front": "What is BERT and how has it been adapted for clinical text?",
+    "back": "BERT (Bidirectional Encoder Representations from Transformers) is a transformer model pretrained on general text. ClinicalBERT and BioBERT are domain-adapted versions trained on clinical notes and biomedical literature, respectively."
+  },
+  {
+    "id": 49,
+    "chapter": 4,
+    "front": "What is de-identification in clinical NLP and why is it required?",
+    "back": "De-identification removes protected health information (PHI) from clinical text (e.g., names, dates, MRNs) to comply with HIPAA before using notes for NLP model training or research."
+  },
+  {
+    "id": 50,
+    "chapter": 4,
+    "front": "What is ICD coding automation using NLP?",
+    "back": "NLP models analyze clinical discharge summaries to suggest ICD-10 diagnosis codes automatically, reducing coder burden and improving coding accuracy and revenue cycle efficiency."
+  },
+  {
+    "id": 51,
+    "chapter": 4,
+    "front": "What is sentiment analysis in the context of patient-generated health data?",
+    "back": "Sentiment analysis applies NLP to assess emotional tone in patient-written content (e.g., symptom diary entries, social media posts) to detect depression signals, treatment adherence, or patient satisfaction."
+  },
+  {
+    "id": 52,
+    "chapter": 4,
+    "front": "What is information extraction versus text classification in clinical NLP?",
+    "back": "Information extraction pulls structured data from free text (e.g., extracting drug doses). Text classification assigns a category to an entire document (e.g., classifying a note as sepsis-positive)."
+  },
+  {
+    "id": 53,
+    "chapter": 4,
+    "front": "What is the MIMIC-III database and its role in clinical NLP research?",
+    "back": "MIMIC-III (Medical Information Mart for Intensive Care) is a publicly available ICU database from Beth Israel Deaconess Medical Center containing 40,000+ patient records. It is a benchmark dataset for clinical NLP and AI research."
+  },
+  {
+    "id": 54,
+    "chapter": 4,
+    "front": "What is relation extraction in clinical NLP?",
+    "back": "Relation extraction identifies semantic relationships between entities in clinical text, such as linking a medication to its indication ('metformin' treats 'type 2 diabetes') within a clinical note."
+  },
+  {
+    "id": 55,
+    "chapter": 4,
+    "front": "What is SNOMED CT and how does it relate to NLP in EHRs?",
+    "back": "SNOMED CT (Systematized Nomenclature of Medicine Clinical Terms) is a comprehensive clinical terminology standard. NLP systems map extracted clinical concepts to SNOMED CT codes for interoperability and structured data creation."
+  },
+  {
+    "id": 56,
+    "chapter": 4,
+    "front": "What is NLP-based clinical phenotyping?",
+    "back": "Clinical phenotyping uses NLP to identify patients with specific conditions from EHR text, enabling cohort identification for research studies or quality improvement without manual chart review."
+  },
+  {
+    "id": 57,
+    "chapter": 4,
+    "front": "What challenge does clinical abbreviation and acronym ambiguity pose to NLP systems?",
+    "back": "Abbreviations like 'MS' can mean multiple sclerosis, mitral stenosis, or morphine sulfate. Disambiguation requires context-aware models, a major challenge unique to clinical NLP compared to general-language NLP."
+  },
+  {
+    "id": 58,
+    "chapter": 4,
+    "front": "What is the difference between rule-based and machine-learning-based clinical NLP?",
+    "back": "Rule-based NLP uses expert-defined patterns and dictionaries (e.g., MetaMap); ML-based NLP learns patterns from annotated corpora. Hybrid systems often outperform either approach alone in clinical settings."
+  },
+  {
+    "id": 59,
+    "chapter": 4,
+    "front": "What is speech recognition in clinical AI and which commercial system is most deployed?",
+    "back": "Clinical speech recognition converts physician dictation to text for EHR documentation. Nuance DAX (Dragon Ambient eXperience) is the most widely deployed system, using AI to generate structured clinical notes from ambient conversation."
+  },
+  {
+    "id": 60,
+    "chapter": 4,
+    "front": "What is a word embedding and how is it used in clinical NLP?",
+    "back": "Word embeddings (e.g., Word2Vec, FastText) represent words as dense numerical vectors capturing semantic similarity. In clinical NLP, embeddings trained on medical text capture domain-specific relationships (e.g., 'MI' near 'troponin')."
+  },
+  {
+    "id": 61,
+    "chapter": 5,
+    "front": "What does FHIR stand for and which organization developed it?",
+    "back": "FHIR stands for Fast Healthcare Interoperability Resources. It was developed by HL7 International as a standard for exchanging electronic health information using modern web technologies (REST APIs, JSON, XML)."
+  },
+  {
+    "id": 62,
+    "chapter": 5,
+    "front": "What is a FHIR Resource and give three clinical examples?",
+    "back": "A FHIR Resource is a modular unit of health information. Examples include Patient (demographics), Observation (lab results, vitals), and MedicationRequest (prescriptions). Over 150 resources exist in FHIR R4."
+  },
+  {
+    "id": 63,
+    "chapter": 5,
+    "front": "What is the 21st Century Cures Act's role in health data interoperability?",
+    "back": "The 21st Century Cures Act (2016) mandates that EHR vendors provide open APIs (FHIR-based) to give patients and developers access to health data and prohibits information blocking by providers and vendors."
+  },
+  {
+    "id": 64,
+    "chapter": 5,
+    "front": "What is SMART on FHIR?",
+    "back": "SMART on FHIR (Substitutable Medical Apps, Reusable Technologies) is a framework enabling clinical apps to securely launch within EHRs using OAuth 2.0 and FHIR APIs, allowing AI tools to integrate directly into clinical workflows."
+  },
+  {
+    "id": 65,
+    "chapter": 5,
+    "front": "What is an EHR and what are the two largest EHR vendors in the US?",
+    "back": "An Electronic Health Record (EHR) is a digital record of patient health information. Epic Systems and Oracle Health (formerly Cerner) are the two largest EHR vendors in the US, together covering the majority of hospital beds."
+  },
+  {
+    "id": 66,
+    "chapter": 5,
+    "front": "What is the difference between an EHR and an EMR?",
+    "back": "An EMR (Electronic Medical Record) is a digital record used within one practice. An EHR (Electronic Health Record) is designed to share information across providers and settings, supporting care coordination and interoperability."
+  },
+  {
+    "id": 67,
+    "chapter": 5,
+    "front": "What is HL7 v2 and how does it differ from FHIR?",
+    "back": "HL7 v2 is a legacy messaging standard using pipe-delimited text, widely deployed in hospital systems for decades. FHIR uses modern REST APIs and structured formats (JSON/XML), making it far easier to develop and integrate AI tools."
+  },
+  {
+    "id": 68,
+    "chapter": 5,
+    "front": "What is the CommonWell Health Alliance?",
+    "back": "CommonWell Health Alliance is a non-profit industry coalition that built a nationwide health data sharing network, enabling patient record exchange across different EHR platforms to support care coordination and AI data access."
+  },
+  {
+    "id": 69,
+    "chapter": 5,
+    "front": "What is the role of a Master Patient Index (MPI) in health information systems?",
+    "back": "An MPI is a database that uniquely identifies each patient across all systems within a healthcare organization, preventing duplicate records and ensuring AI systems reference the correct patient data."
+  },
+  {
+    "id": 70,
+    "chapter": 5,
+    "front": "What is OMOP CDM and why does it matter for clinical AI research?",
+    "back": "OMOP (Observational Medical Outcomes Partnership) Common Data Model standardizes health data structure and vocabulary across institutions. It enables multi-site AI studies by allowing a single model or query to run on data from multiple hospitals."
+  },
+  {
+    "id": 71,
+    "chapter": 5,
+    "front": "What is CDS Hooks and how does it enable AI integration in EHRs?",
+    "back": "CDS Hooks is an HL7 specification that allows external AI services to be triggered at defined points in EHR workflow (e.g., order entry, patient open) and return real-time decision support cards to the clinician."
+  },
+  {
+    "id": 72,
+    "chapter": 5,
+    "front": "What is information blocking under the 21st Century Cures Act?",
+    "back": "Information blocking is the practice of interfering with access, exchange, or use of electronic health information. The ONC regulations prohibit it by providers, health IT developers, and health information networks, with civil monetary penalties."
+  },
+  {
+    "id": 73,
+    "chapter": 5,
+    "front": "What is the Argonaut Project?",
+    "back": "The Argonaut Project is an industry initiative that accelerated FHIR adoption by developing FHIR R2 implementation guides for DAF (Data Access Framework) profiles, enabling real-world EHR data API access for app developers."
+  },
+  {
+    "id": 74,
+    "chapter": 5,
+    "front": "What is a clinical data warehouse (CDW) and how does it differ from a transactional EHR?",
+    "back": "A CDW aggregates and harmonizes historical data from multiple clinical systems for analytics and AI model development. Unlike a transactional EHR optimized for real-time care, a CDW is optimized for querying large datasets."
+  },
+  {
+    "id": 75,
+    "chapter": 5,
+    "front": "What is the US Core Data for Interoperability (USCDI)?",
+    "back": "USCDI is a standardized set of health data classes and elements required for interoperable exchange under ONC regulations, including demographics, vital signs, labs, medications, and clinical notes."
+  },
+  {
+    "id": 76,
+    "chapter": 6,
+    "front": "What is the difference between internal and external validation of a clinical AI model?",
+    "back": "Internal validation tests model performance on held-out data from the same institution. External validation tests on data from different institutions or patient populations, which is required to assess real-world generalizability."
+  },
+  {
+    "id": 77,
+    "chapter": 6,
+    "front": "What is calibration in a clinical prediction model and how is it measured?",
+    "back": "Calibration measures how well predicted probabilities match observed outcomes. A model predicting 30% risk should be right in 30% of such cases. It is assessed using calibration curves and the Brier score."
+  },
+  {
+    "id": 78,
+    "chapter": 6,
+    "front": "What is the TRIPOD statement?",
+    "back": "TRIPOD (Transparent Reporting of a Multivariable Prediction Model for Individual Prognosis or Diagnosis) is a 22-item reporting guideline for prediction models. TRIPOD+AI extends it for machine learning clinical models."
+  },
+  {
+    "id": 79,
+    "chapter": 6,
+    "front": "What is algorithmic bias and give one clinical example?",
+    "back": "Algorithmic bias is systematic error that produces unfair outcomes for certain demographic groups. A notable example is the Optum commercial healthcare algorithm that used health costs as a proxy for health need, systematically underserving Black patients."
+  },
+  {
+    "id": 80,
+    "chapter": 6,
+    "front": "What is the concept of 'dataset shift' in deployed clinical AI?",
+    "back": "Dataset shift occurs when the statistical distribution of input data in deployment differs from training data (e.g., patient population change, EHR upgrade). It can silently degrade model performance without triggering visible errors."
+  },
+  {
+    "id": 81,
+    "chapter": 6,
+    "front": "What is a clinical AI model card?",
+    "back": "A model card is a structured document disclosing a model's intended use, performance across subgroups, training data, limitations, and potential risks. It is recommended by the FDA and major AI ethics bodies for transparency."
+  },
+  {
+    "id": 82,
+    "chapter": 6,
+    "front": "What is the difference between sensitivity and specificity?",
+    "back": "Sensitivity (recall) is the probability of a positive test given disease presence (true positive rate). Specificity is the probability of a negative test given disease absence (true negative rate). They are inversely related and threshold-dependent."
+  },
+  {
+    "id": 83,
+    "chapter": 6,
+    "front": "What is prospective clinical validation and why is it the gold standard for clinical AI?",
+    "back": "Prospective validation deploys a model in real clinical workflows and measures its impact on patient outcomes in a forward-looking manner. It is the gold standard because retrospective analyses cannot capture workflow integration effects or temporal shifts."
+  },
+  {
+    "id": 84,
+    "chapter": 6,
+    "front": "What is alarm fatigue and how does poor AI specificity contribute to it?",
+    "back": "Alarm fatigue is clinician desensitization to frequent alerts. AI systems with low specificity generate excessive false positive alerts, causing clinicians to ignore or override them, potentially missing true positives."
+  },
+  {
+    "id": 85,
+    "chapter": 6,
+    "front": "What is the concept of 'Rashomon effect' in clinical AI?",
+    "back": "The Rashomon effect refers to the existence of many equally accurate ML models with different predictions for the same patient. It highlights that selecting one model arbitrarily may introduce bias or instability in clinical decisions."
+  },
+  {
+    "id": 86,
+    "chapter": 6,
+    "front": "What is a subgroup analysis in AI model validation and why is it essential for safety?",
+    "back": "Subgroup analysis evaluates model performance separately across demographic groups (age, sex, race, insurance status). It is essential because aggregate accuracy can mask poor performance for vulnerable patient subgroups."
+  },
+  {
+    "id": 87,
+    "chapter": 6,
+    "front": "What does 'overfitting' mean in clinical ML and how does it manifest in deployment?",
+    "back": "Overfitting means a model memorizes training data patterns rather than learning generalizable relationships. In deployment, an overfitted model performs well on the training institution's data but fails when applied to new hospitals or patient populations."
+  },
+  {
+    "id": 88,
+    "chapter": 6,
+    "front": "What is the STARD guideline and how does it apply to AI diagnostic tests?",
+    "back": "STARD (Standards for Reporting Diagnostic Accuracy Studies) provides reporting standards for diagnostic test studies. STARD-AI is its extension for AI-based diagnostic tools, requiring transparent reporting of training data, validation methods, and subgroup performance."
+  },
+  {
+    "id": 89,
+    "chapter": 6,
+    "front": "What is 'concept drift' in a deployed clinical AI model?",
+    "back": "Concept drift is the change in underlying relationships between input features and outcomes over time (e.g., a COVID-19 mortality model trained in 2020 may drift as viral variants and treatments change). Continuous monitoring is required."
+  },
+  {
+    "id": 90,
+    "chapter": 6,
+    "front": "What is the positive predictive value (PPV) and how does disease prevalence affect it?",
+    "back": "PPV is the probability that a patient with a positive test truly has the disease. PPV decreases sharply in low-prevalence populations, meaning the same AI test will have many more false positives when used for general screening versus targeted high-risk testing."
+  },
+  {
+    "id": 91,
+    "chapter": 7,
+    "front": "What is a Clinical Decision Support System (CDSS) and name two FDA-regulated examples?",
+    "back": "A CDSS is a health IT tool that uses patient data to generate clinical recommendations. FDA-regulated examples include sepsis alert tools (e.g., Epic Sepsis Model) and antibiotic dosing systems flagged as Software as a Medical Device (SaMD)."
+  },
+  {
+    "id": 92,
+    "chapter": 7,
+    "front": "What is the 21st Century Cures Act's definition of non-device clinical decision support?",
+    "back": "Non-device CDS is software that displays, analyzes, or provides recommendations based on patient-specific data, but where the clinician can independently review the basis and is not the sole input for a decision. Such software is exempt from FDA device regulation."
+  },
+  {
+    "id": 93,
+    "chapter": 7,
+    "front": "What is alert fatigue in CDSS and what interventions reduce it?",
+    "back": "Alert fatigue occurs when clinicians override or ignore excessive CDSS alerts. Reduction strategies include tiered alerting (critical vs. advisory), workflow-integrated interruptive alerts only for high-acuity issues, and regular alert pruning based on override data."
+  },
+  {
+    "id": 94,
+    "chapter": 7,
+    "front": "What is the Five Rights framework for CDS implementation?",
+    "back": "The Five Rights of CDS state that the right information should be provided to the right person in the right format through the right channel at the right time to support point-of-care decision making effectively."
+  },
+  {
+    "id": 95,
+    "chapter": 7,
+    "front": "What is an infobutton in clinical decision support?",
+    "back": "An infobutton is a context-sensitive link embedded in EHR workflows that retrieves relevant knowledge resources (drug references, guidelines) based on the current clinical context (e.g., patient diagnosis, ordered medication)."
+  },
+  {
+    "id": 96,
+    "chapter": 7,
+    "front": "What is the Epic Sepsis Model (ESM) and what was its performance in a major external validation?",
+    "back": "The Epic Sepsis Model predicts sepsis onset from EHR data. A 2021 JAMA Internal Medicine external validation by Wong et al. found an AUROC of 0.63 and poor positive predictive value, highlighting the risk of deploying commercial AI without independent validation."
+  },
+  {
+    "id": 97,
+    "chapter": 7,
+    "front": "What is order set CDSS and how does it reduce clinical variation?",
+    "back": "Order sets are pre-configured bundles of orders (labs, medications, procedures) embedded in the EHR that embed evidence-based protocols. They reduce variation in care delivery and serve as passive CDSS by promoting guideline adherence at the point of ordering."
+  },
+  {
+    "id": 98,
+    "chapter": 7,
+    "front": "What is drug-drug interaction (DDI) alerting in EHRs?",
+    "back": "DDI alerts notify prescribers when two co-prescribed medications have known adverse interactions. Despite high clinical relevance, override rates exceed 90% in many systems due to poor specificity and alert fatigue."
+  },
+  {
+    "id": 99,
+    "chapter": 7,
+    "front": "What is a passive versus active CDSS?",
+    "back": "A passive CDSS requires the clinician to initiate a query (e.g., looking up a drug reference). An active CDSS proactively alerts the clinician at a relevant workflow moment without requiring them to seek the information."
+  },
+  {
+    "id": 100,
+    "chapter": 7,
+    "front": "What is HIMSS and its role in health IT and CDSS standards?",
+    "back": "HIMSS (Healthcare Information and Management Systems Society) is a global not-for-profit organization that advances health through IT. It publishes CDSS best practices, evaluates EHR adoption (HIMSS Analytics), and advocates for interoperability standards."
+  },
+  {
+    "id": 101,
+    "chapter": 7,
+    "front": "What is the KLAS Research ranking system in the context of AI health IT?",
+    "back": "KLAS Research independently evaluates healthcare IT vendor performance through provider surveys. Its AI-specific reports benchmark clinical AI tools by adoption, satisfaction, and outcomes, helping health systems select and compare AI vendors."
+  },
+  {
+    "id": 102,
+    "chapter": 7,
+    "front": "What is a knowledge base in a rule-based CDSS?",
+    "back": "A knowledge base is a structured repository of clinical rules, guidelines, and evidence (e.g., drug interaction databases, treatment algorithms) that a rule-based CDSS queries to generate patient-specific recommendations."
+  },
+  {
+    "id": 103,
+    "chapter": 7,
+    "front": "What distinguishes a closed-loop CDSS from a standard one?",
+    "back": "A closed-loop CDSS not only generates recommendations but also automatically enacts them (e.g., adjusting insulin infusion rates via an automated pump) with minimal human intervention. It is used in ICU glucose and anesthesia management."
+  },
+  {
+    "id": 104,
+    "chapter": 7,
+    "front": "What is the role of clinical pharmacists in CDSS alert management?",
+    "back": "Clinical pharmacists review DDI, renal dosing, and allergy alerts filtered or generated by CDSS, reducing physician alert burden. Their expertise in pharmacokinetics makes them critical gatekeepers for medication-related AI alerts."
+  },
+  {
+    "id": 105,
+    "chapter": 7,
+    "front": "What is a best practice advisory (BPA) in EHR-based CDSS?",
+    "back": "A BPA (Best Practice Advisory) is an interruptive alert in Epic EHR that fires based on clinical logic to recommend evidence-based actions (e.g., preventive care, protocol adherence). BPAs require clinicians to acknowledge or override before proceeding."
+  },
+  {
+    "id": 106,
+    "chapter": 8,
+    "front": "What is risk stratification in clinical AI and give a clinical use case?",
+    "back": "Risk stratification uses predictive models to classify patients by outcome likelihood (low, medium, high risk). A common use case is 30-day hospital readmission prediction to target discharge interventions for high-risk patients."
+  },
+  {
+    "id": 107,
+    "chapter": 8,
+    "front": "What is the LACE index and what does it predict?",
+    "back": "The LACE index (Length of stay, Acuity of admission, Comorbidities, Emergency department use) is a validated scoring tool predicting 30-day unplanned readmission or death. It is widely used as a benchmark against which ML readmission models are compared."
+  },
+  {
+    "id": 108,
+    "chapter": 8,
+    "front": "What is the early warning score (EWS) and how has AI improved it?",
+    "back": "Early warning scores (e.g., NEWS, MEWS) aggregate vital signs to identify deteriorating inpatients. AI models like the National Early Warning Score 2 + ML improve on static thresholds by incorporating continuous EHR variables and temporal trends."
+  },
+  {
+    "id": 109,
+    "chapter": 8,
+    "front": "What is the Charlson Comorbidity Index (CCI)?",
+    "back": "The CCI assigns weights to 17 comorbidities to estimate 10-year mortality risk. It is used as an input feature in AI risk stratification models and as a covariate in clinical studies to adjust for baseline health status."
+  },
+  {
+    "id": 110,
+    "chapter": 8,
+    "front": "What is survival analysis and which ML model is commonly used for clinical time-to-event prediction?",
+    "back": "Survival analysis models time to an event (e.g., death, disease recurrence). The Cox Proportional Hazards model is the clinical standard; DeepSurv and Random Survival Forests are ML extensions that handle non-linear covariate effects."
+  },
+  {
+    "id": 111,
+    "chapter": 8,
+    "front": "What is the Framingham Risk Score and how does it relate to AI cardiovascular risk prediction?",
+    "back": "The Framingham Risk Score estimates 10-year atherosclerotic cardiovascular disease (ASCVD) risk. AI models using EHR data (e.g., lipids, ECG, retinal imaging) have been developed to improve upon or replace Framingham-based predictions."
+  },
+  {
+    "id": 112,
+    "chapter": 8,
+    "front": "What is a population health management platform and how does AI enable it?",
+    "back": "A population health management platform aggregates data across a patient panel to identify high-risk individuals for proactive outreach. AI enables risk stratification at scale, flagging patients for preventive interventions before acute deterioration."
+  },
+  {
+    "id": 113,
+    "chapter": 8,
+    "front": "What is the sepsis-3 definition and how does AI use it for early sepsis prediction?",
+    "back": "Sepsis-3 defines sepsis as life-threatening organ dysfunction caused by dysregulated host response to infection (SOFA score increase >=2). AI models mine EHR vitals and labs to predict sepsis onset hours before the SOFA threshold is crossed."
+  },
+  {
+    "id": 114,
+    "chapter": 8,
+    "front": "What is the AKI prediction model and which study demonstrated its clinical utility?",
+    "back": "DeepMind's Streams/AKI model (published in Nature 2019 by Toma\u0161ev et al.) predicted acute kidney injury up to 48 hours in advance using EHR data. It achieved an AUROC of 0.921 for dialysis-requiring AKI in a VA hospital dataset."
+  },
+  {
+    "id": 115,
+    "chapter": 8,
+    "front": "What is the HEART score and how might AI augment it in emergency risk stratification?",
+    "back": "The HEART score (History, ECG, Age, Risk factors, Troponin) stratifies chest pain patients for MACE risk in the ED. AI models integrating continuous ECG features and serial troponin kinetics have been shown to improve upon static HEART score predictions."
+  },
+  {
+    "id": 116,
+    "chapter": 8,
+    "front": "What is the SDoH (Social Determinants of Health) and how does AI incorporate it into risk models?",
+    "back": "SDoH are non-medical factors (housing, income, food security) that affect health outcomes. AI models increasingly incorporate SDoH data from EHRs, claims, and community databases to improve risk prediction accuracy and address health equity."
+  },
+  {
+    "id": 117,
+    "chapter": 8,
+    "front": "What is care gap identification in AI-driven population health?",
+    "back": "Care gap identification uses AI to automatically flag patients who are due for preventive services (e.g., mammography, colonoscopy, HbA1c) but have not received them, enabling targeted outreach to close quality measure gaps."
+  },
+  {
+    "id": 118,
+    "chapter": 8,
+    "front": "What is the difference between a prognostic model and a predictive model in clinical AI?",
+    "back": "A prognostic model estimates the natural course of disease (e.g., cancer survival without intervention). A predictive model estimates treatment response (e.g., who will benefit from a specific drug). Both are used in risk stratification but serve distinct clinical purposes."
+  },
+  {
+    "id": 119,
+    "chapter": 8,
+    "front": "What is the SOFA score?",
+    "back": "The Sequential Organ Failure Assessment (SOFA) score quantifies organ dysfunction across six systems (respiratory, coagulation, liver, cardiovascular, CNS, renal). A SOFA score >= 2 is used to define sepsis in the Sepsis-3 criteria."
+  },
+  {
+    "id": 120,
+    "chapter": 8,
+    "front": "What is 'phenotype-wide association study' (PheWAS) and how does AI enable it?",
+    "back": "PheWAS scans across hundreds of clinical phenotypes to find associations with a genetic variant or exposure. AI enables PheWAS at scale by automatically phenotyping patients from EHR data using NLP and structured data classification."
+  },
+  {
+    "id": 121,
+    "chapter": 9,
+    "front": "What is semantic segmentation in medical image analysis?",
+    "back": "Semantic segmentation assigns a class label to every pixel in an image (e.g., tumor vs. normal tissue). It enables precise organ and lesion delineation in CT, MRI, and histopathology for radiation planning and surgical guidance."
+  },
+  {
+    "id": 122,
+    "chapter": 9,
+    "front": "What is the Dice coefficient and how is it used to evaluate segmentation models?",
+    "back": "The Dice coefficient measures spatial overlap between predicted and ground-truth segmentation masks: 2|A intersect B| / (|A| + |B|). Values range from 0 (no overlap) to 1 (perfect overlap). It is the standard metric for medical image segmentation benchmarks."
+  },
+  {
+    "id": 123,
+    "chapter": 9,
+    "front": "What is image registration in medical AI?",
+    "back": "Image registration aligns two images from different time points, modalities, or patients to the same coordinate space. It enables longitudinal tumor measurement, multimodal fusion (PET-CT), and atlas-based brain segmentation."
+  },
+  {
+    "id": 124,
+    "chapter": 9,
+    "front": "What is the DICOM standard?",
+    "back": "DICOM (Digital Imaging and Communications in Medicine) is the universal standard for storing, transmitting, and displaying medical images. DICOM tags embed patient and acquisition metadata alongside pixel data in every image file."
+  },
+  {
+    "id": 125,
+    "chapter": 9,
+    "front": "What is a PACS and how does it relate to AI deployment in radiology?",
+    "back": "PACS (Picture Archiving and Communication System) stores and distributes medical images. AI inference tools integrate with PACS via DICOM-RT or vendor-neutral archives (VNA) to automatically analyze images at the time of acquisition."
+  },
+  {
+    "id": 126,
+    "chapter": 9,
+    "front": "What is CheXNet and what did it demonstrate?",
+    "back": "CheXNet (Rajpurkar et al., Stanford, 2017) was a DenseNet-121 trained on 112,000 chest X-rays (ChestX-ray14 dataset) that diagnosed pneumonia with AUC 0.768, exceeding the average performance of four radiologists on the same test set."
+  },
+  {
+    "id": 127,
+    "chapter": 9,
+    "front": "What is radiomics and how does it differ from visual AI image analysis?",
+    "back": "Radiomics extracts high-dimensional quantitative features (texture, shape, intensity) from medical images using mathematical algorithms. Unlike CNN visual analysis, radiomics produces interpretable features that can be correlated with genomic or clinical outcomes."
+  },
+  {
+    "id": 128,
+    "chapter": 9,
+    "front": "What is the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) and its significance for medical AI?",
+    "back": "ILSVRC is an annual computer vision competition using 1.2 million annotated images. AlexNet's 2012 win with deep learning sparked the modern era of medical image AI, as the CNN architectures developed for ILSVRC were subsequently adapted to medical tasks."
+  },
+  {
+    "id": 129,
+    "chapter": 9,
+    "front": "What is object detection versus image classification in medical imaging AI?",
+    "back": "Image classification labels an entire image (e.g., 'pneumonia present'). Object detection localizes and labels specific structures (e.g., draws a bounding box around a nodule). Clinical object detection aids lesion triage and measurement."
+  },
+  {
+    "id": 130,
+    "chapter": 9,
+    "front": "What is the role of AI in reducing incidental findings in medical imaging?",
+    "back": "AI tools can flag incidental findings (e.g., lung nodules, adrenal masses, aortic aneurysms) on CT scans ordered for other reasons, enabling appropriate follow-up that might be overlooked in radiology reports focused on the primary indication."
+  },
+  {
+    "id": 131,
+    "chapter": 9,
+    "front": "What is multi-atlas segmentation and where is it used clinically?",
+    "back": "Multi-atlas segmentation registers multiple expert-labeled template images (atlases) to a target image and combines label propagations through majority voting. It is used in radiotherapy planning for automated organ-at-risk delineation."
+  },
+  {
+    "id": 132,
+    "chapter": 9,
+    "front": "What does 'ground truth' mean in medical image AI training?",
+    "back": "Ground truth is the reference standard annotation against which AI outputs are compared. In medical imaging, it is typically created by one or more expert clinicians (radiologists, pathologists) and represents the 'correct' label for model training."
+  },
+  {
+    "id": 133,
+    "chapter": 9,
+    "front": "What is active learning in the context of medical image annotation?",
+    "back": "Active learning selects the most informative unlabeled samples for expert annotation, reducing the total labeling effort. It is particularly valuable in medical AI where radiologist or pathologist annotation time is scarce and expensive."
+  },
+  {
+    "id": 134,
+    "chapter": 9,
+    "front": "What is the MIDRC (Medical Imaging and Data Resource Center)?",
+    "back": "MIDRC is a federally funded initiative (NIBIB) that aggregates de-identified medical imaging data (primarily COVID-19 chest imaging) for AI research, addressing data access barriers by creating large, diverse, annotated medical image datasets."
+  },
+  {
+    "id": 135,
+    "chapter": 9,
+    "front": "What is the Lung-RADS classification system and how does AI apply to it?",
+    "back": "Lung-RADS (Lung Imaging Reporting and Data System, ACR) categorizes lung nodules on LDCT (1-4) to guide management. AI tools automate nodule detection, volumetric measurement, and Lung-RADS categorization to standardize reporting."
+  },
+  {
+    "id": 136,
+    "chapter": 10,
+    "front": "What is AI-assisted chest X-ray triage and why is it clinically valuable in low-resource settings?",
+    "back": "AI tools (e.g., Qure.ai qXR) automatically flag abnormal chest X-rays and prioritize worklists. In low-resource settings with radiologist shortages, this enables urgent pathology (PTB, pneumonia) to be seen first, reducing mortality from delayed diagnosis."
+  },
+  {
+    "id": 137,
+    "chapter": 10,
+    "front": "What is the ACR Data Science Institute and what does it provide for radiology AI?",
+    "back": "The ACR Data Science Institute provides resources including the ACR AI-LAB platform for developing and validating radiology AI models, a catalog of approved AI use cases, and guidance on AI validation and implementation for radiologists."
+  },
+  {
+    "id": 138,
+    "chapter": 10,
+    "front": "What is the Aidoc AI platform and its primary radiology application?",
+    "back": "Aidoc is an AI platform that provides worklist prioritization for critical radiology findings. Its flagship products detect intracranial hemorrhage, PE, and cervical spine fractures on CT with FDA clearance, flagging urgent studies in real time."
+  },
+  {
+    "id": 139,
+    "chapter": 10,
+    "front": "What is the role of AI in mammography screening?",
+    "back": "AI tools (e.g., iCAD ProFound AI, Seno.ai) analyze digital mammograms to detect microcalcifications and masses, reduce false positives, and can act as a second reader to improve cancer detection rate and reduce radiologist workload."
+  },
+  {
+    "id": 140,
+    "chapter": 10,
+    "front": "What is automated lung nodule detection on CT and name an FDA-cleared tool?",
+    "back": "Automated lung nodule detection uses CNN-based AI to identify and measure pulmonary nodules on CT images. Veracyte Prosigna's integrated approach and Riverain Technologies' ClearRead CT are among FDA-cleared nodule detection tools."
+  },
+  {
+    "id": 141,
+    "chapter": 10,
+    "front": "What is the CAD (computer-aided detection) versus CADx distinction in radiology AI?",
+    "back": "CADe (computer-aided detection) finds and localizes candidate lesions. CADx (computer-aided diagnosis) characterizes found lesions (e.g., benign vs. malignant). Most FDA-cleared radiology AI tools are CADe; CADx tools require higher evidence standards."
+  },
+  {
+    "id": 142,
+    "chapter": 10,
+    "front": "What is the role of AI in reducing radiology turnaround time for stroke?",
+    "back": "AI tools (e.g., RapidAI, Viz.ai) automatically analyze CT/CTA for large vessel occlusion and automatically alert the stroke team, reducing door-to-needle time and improving functional outcomes. Viz.ai demonstrated a 52-minute reduction in time-to-treatment."
+  },
+  {
+    "id": 143,
+    "chapter": 10,
+    "front": "What is automated prostate MRI analysis and what scoring system does AI target?",
+    "back": "AI tools analyze multiparametric prostate MRI (mpMRI) to detect and grade lesions according to PI-RADS v2.1 (Prostate Imaging Reporting and Data System). AI achieves AUC >0.85 for clinically significant prostate cancer detection in published studies."
+  },
+  {
+    "id": 144,
+    "chapter": 10,
+    "front": "What is the difference between a 'worklist AI' and a 'diagnostic AI' tool in radiology?",
+    "back": "Worklist AI prioritizes which studies a radiologist reads first based on urgency (e.g., ICH flag moves a head CT to the top). Diagnostic AI generates findings within a study. Worklist AI has lower clinical risk and wider adoption than fully autonomous diagnostic AI."
+  },
+  {
+    "id": 145,
+    "chapter": 10,
+    "front": "What is structured reporting in radiology and how does AI enable it?",
+    "back": "Structured radiology reports use standardized templates and fields (e.g., ACR reporting templates) instead of free text. AI tools extract findings from dictated reports and populate structured fields, improving data quality for downstream analytics."
+  },
+  {
+    "id": 146,
+    "chapter": 10,
+    "front": "What is automated bone age estimation using AI and which benchmark does it use?",
+    "back": "AI tools (e.g., BoneXpert, Gleamer) estimate skeletal maturity from pediatric hand radiographs. They are validated against the Greulich-Pyle and Tanner-Whitehouse atlases and achieve accuracy comparable to radiologists in multicenter studies."
+  },
+  {
+    "id": 147,
+    "chapter": 10,
+    "front": "What is the CE-FAMD regulatory pathway in Europe for AI radiology tools?",
+    "back": "The CE mark under the EU Medical Device Regulation (MDR 2017/745) is required for AI radiology tools marketed in Europe. Class IIa or IIb designation is common for diagnostic AI, requiring conformity assessment by a notified body."
+  },
+  {
+    "id": 148,
+    "chapter": 10,
+    "front": "What is the role of explainability (e.g., Grad-CAM) in radiology AI?",
+    "back": "Grad-CAM (Gradient-weighted Class Activation Mapping) generates heat maps highlighting image regions that most influenced an AI prediction. In radiology, these maps help radiologists verify that AI attention aligns with true lesion location."
+  },
+  {
+    "id": 149,
+    "chapter": 10,
+    "front": "What is the Radiological Society of North America (RSNA) AI Challenge?",
+    "back": "The RSNA AI Challenge is an annual competition where teams worldwide develop AI models for specific radiology tasks (e.g., intracranial hemorrhage detection, pneumonia detection) using RSNA-curated datasets to advance open benchmarking."
+  },
+  {
+    "id": 150,
+    "chapter": 10,
+    "front": "What is low-dose CT lung cancer screening and what role does AI play?",
+    "back": "LDCT is recommended annually for high-risk smokers (USPSTF, 2021). AI tools automate nodule detection, volumetric growth tracking, and Lung-RADS assignment, reducing inter-reader variability and enabling screening programs to scale with limited radiologist resources."
+  },
+  {
+    "id": 151,
+    "chapter": 11,
+    "front": "What is digital pathology and why does it enable AI?",
+    "back": "Digital pathology involves scanning glass slides to create whole-slide images (WSI). WSI enables AI analysis by converting pathology to a computational image analysis problem, allowing CNNs to process gigapixel images for diagnosis and biomarker detection."
+  },
+  {
+    "id": 152,
+    "chapter": 11,
+    "front": "What is the first FDA-approved AI algorithm in pathology and what does it detect?",
+    "back": "Paige Prostate (Paige.AI) was the first FDA-approved AI algorithm in pathology (2021). It detects prostate cancer on whole-slide images with sensitivity exceeding pathologists in some studies."
+  },
+  {
+    "id": 153,
+    "chapter": 11,
+    "front": "What is the Gleason grading system and how does AI augment it?",
+    "back": "Gleason grading scores prostate cancer architectural patterns (3-5) summed into a grade group (1-5). AI tools automate Gleason grading from WSI, reducing interobserver variability and enabling more reproducible grade group assignment."
+  },
+  {
+    "id": 154,
+    "chapter": 11,
+    "front": "What is multiple instance learning (MIL) in computational pathology?",
+    "back": "MIL is a weakly supervised approach where a whole-slide image is treated as a 'bag' of tile instances with only slide-level labels (e.g., cancer positive/negative) available. It enables training large-scale pathology AI without requiring per-tile annotation."
+  },
+  {
+    "id": 155,
+    "chapter": 11,
+    "front": "What is tumor microenvironment analysis using AI in pathology?",
+    "back": "AI analyzes spatial relationships between tumor cells, immune cells (TILs), and stroma in H&E slides to quantify tumor microenvironment features. These features predict immunotherapy response and survival independent of traditional pathology grades."
+  },
+  {
+    "id": 156,
+    "chapter": 11,
+    "front": "What is the role of AI in frozen section analysis?",
+    "back": "AI tools applied to digitized frozen sections can provide rapid intraoperative guidance on margins and diagnosis, potentially accelerating decision-making and reducing the need for immediate repeat resection in cancer surgery."
+  },
+  {
+    "id": 157,
+    "chapter": 11,
+    "front": "What is HER2 scoring in breast pathology and how does AI improve it?",
+    "back": "HER2 (Human Epidermal growth factor Receptor 2) immunohistochemistry is scored 0-3+ to guide trastuzumab therapy. AI-assisted HER2 scoring reduces interobserver variability (the 2+ equivocal category) and correlates with FISH confirmation."
+  },
+  {
+    "id": 158,
+    "chapter": 11,
+    "front": "What is spatial transcriptomics and how does it relate to computational pathology?",
+    "back": "Spatial transcriptomics maps gene expression to specific tissue locations, linking molecular data to histological structure. AI models that correlate morphology with spatial gene expression enable discovery of novel tissue biomarkers from H&E images alone."
+  },
+  {
+    "id": 159,
+    "chapter": 11,
+    "front": "What is the CAMELYON challenge in AI pathology?",
+    "back": "CAMELYON16/17 were international challenges using lymph node H&E slides to benchmark AI detection of breast cancer metastases. Top AI systems achieved higher AUC than individual pathologists, spurring widespread adoption of AI in metastasis detection."
+  },
+  {
+    "id": 160,
+    "chapter": 11,
+    "front": "What is the role of Ki-67 quantification AI in oncology pathology?",
+    "back": "Ki-67 is a nuclear marker of cell proliferation scored by percentage of positive tumor cells. AI tools provide automated Ki-67 quantification from IHC slides, replacing manual counting to improve reproducibility in breast, neuroendocrine, and other cancers."
+  },
+  {
+    "id": 161,
+    "chapter": 11,
+    "front": "What is tumor budding and how does AI detect it in colorectal cancer?",
+    "back": "Tumor budding is the presence of isolated single cells or clusters of < 5 cells at the invasion front of colorectal cancer, associated with worse prognosis. AI quantifies budding density from H&E WSI automatically, enabling reproducible ITBCC scoring."
+  },
+  {
+    "id": 162,
+    "chapter": 11,
+    "front": "What is the TCGA (The Cancer Genome Atlas) and its importance for pathology AI?",
+    "back": "TCGA is an NCI/NHGRI program that collected multi-omic data (genomics, transcriptomics, WSI) from 33 cancer types. TCGA WSIs are a foundational public dataset for training and benchmarking computational pathology AI models."
+  },
+  {
+    "id": 163,
+    "chapter": 11,
+    "front": "What is stain normalization in digital pathology AI?",
+    "back": "H&E staining intensity varies across labs and scanners, causing domain shift in AI models. Stain normalization algorithms (e.g., Macenko, Reinhard) standardize color profiles of WSI tiles before model training or inference to improve generalizability."
+  },
+  {
+    "id": 164,
+    "chapter": 11,
+    "front": "What is the AI-EDRN (AI Early Detection Research Network)?",
+    "back": "AI-EDRN is an NCI initiative integrating AI with biomarker discovery for early cancer detection, using multi-site biospecimen and imaging datasets to train AI models that detect cancer at its earliest, most treatable stage."
+  },
+  {
+    "id": 165,
+    "chapter": 11,
+    "front": "What is NASH grading in liver pathology and how does AI assist?",
+    "back": "NASH (nonalcoholic steatohepatitis) is graded using the NAFLD Activity Score (NAS) on liver biopsy. AI tools quantify steatosis, lobular inflammation, and ballooning automatically from WSI, reducing pathologist variability in NASH clinical trials."
+  },
+  {
+    "id": 166,
+    "chapter": 12,
+    "front": "What is the first FDA-authorized AI algorithm for ECG interpretation?",
+    "back": "The Mayo Clinic AI-ECG algorithm (licensed via Anumana/Eko) was among the first FDA-authorized deep learning ECG tools, detecting low ejection fraction (EF<35%) from a standard 12-lead ECG with an AUC of 0.93."
+  },
+  {
+    "id": 167,
+    "chapter": 12,
+    "front": "What did Attia et al. (2019) demonstrate about AI and ECG?",
+    "back": "Attia et al. (Nature Medicine, 2019) showed that a CNN applied to 12-lead ECGs could identify patients with asymptomatic left ventricular dysfunction (EF <35%) with AUC 0.93 and sensitivity 86%, using the ECG itself as a screening biomarker."
+  },
+  {
+    "id": 168,
+    "chapter": 12,
+    "front": "What is the role of AI in atrial fibrillation detection from wearables?",
+    "back": "AI algorithms analyze single-lead PPG or ECG data from wearables (Apple Watch, Kardia) to detect atrial fibrillation. The Apple Heart Study (2019, NEJM) showed PPG-based AF detection with 84% PPV, leading to FDA clearance."
+  },
+  {
+    "id": 169,
+    "chapter": 12,
+    "front": "What is AI-assisted echocardiography and what task has it been automated?",
+    "back": "AI tools (e.g., Caption AI, EchoGo) automate echo view classification, LV ejection fraction quantification, and valve disease grading. Caption Health's AI guidance system achieved FDA clearance for nurse-performed AI-guided echo acquisition."
+  },
+  {
+    "id": 170,
+    "chapter": 12,
+    "front": "What is HeartFlow FFRCT and what is its clinical utility?",
+    "back": "HeartFlow FFRCT is FDA-cleared software that uses coronary CTA data to computationally simulate fractional flow reserve (FFR), a measure of coronary stenosis significance. It reduces need for invasive diagnostic catheterization."
+  },
+  {
+    "id": 171,
+    "chapter": 12,
+    "front": "What is the SCCT AI/CT-FFR workflow in coronary artery disease evaluation?",
+    "back": "The Society of Cardiovascular Computed Tomography (SCCT) endorses AI-based CT-FFR as a non-invasive method to evaluate hemodynamically significant coronary stenoses, reducing unnecessary invasive angiography and guiding revascularization decisions."
+  },
+  {
+    "id": 172,
+    "chapter": 12,
+    "front": "What is AI-based risk prediction in heart failure management?",
+    "back": "AI models trained on EHR data predict 30-day and 1-year heart failure readmission and mortality, enabling targeted discharge interventions. Features include ejection fraction, BNP levels, sodium, medications, and prior hospitalization history."
+  },
+  {
+    "id": 173,
+    "chapter": 12,
+    "front": "What is automated plaque analysis using CCTA AI?",
+    "back": "AI tools (e.g., Cleerly) quantify coronary plaque volume, composition (calcified, non-calcified, low attenuation), and stenosis from CCTA, providing more precise ASCVD risk beyond CAC scoring for guiding statin and aspirin therapy decisions."
+  },
+  {
+    "id": 174,
+    "chapter": 12,
+    "front": "What is the Zio Patch and how does AI enhance its clinical utility?",
+    "back": "The Zio Patch (iRhythm) is an FDA-cleared ambulatory ECG patch worn for up to 14 days. AI analyzes the continuous recording to classify arrhythmias, presenting a physician-reviewed summary, enabling AF detection that a 24-hour Holter misses."
+  },
+  {
+    "id": 175,
+    "chapter": 12,
+    "front": "What is cardiac MRI segmentation AI and why is it clinically valuable?",
+    "back": "AI automates segmentation of cardiac chambers on CMR, enabling automated volumetric analysis (LVEDV, LVEF, LV mass) without manual contour drawing. This reduces CMR reporting time from hours to minutes with equivalent accuracy to expert readers."
+  },
+  {
+    "id": 176,
+    "chapter": 12,
+    "front": "What is the role of AI in sudden cardiac death risk prediction?",
+    "back": "AI models integrating ECG features (QT interval variability, T-wave morphology), structural data (EF, scar burden), and genetics improve prediction of sudden cardiac death risk, potentially refining ICD implantation criteria beyond current EF < 35% guidelines."
+  },
+  {
+    "id": 177,
+    "chapter": 12,
+    "front": "What is the Cardiogram DeepHeart study?",
+    "back": "The Cardiogram DeepHeart study used deep learning on Apple Watch heart rate and step data from 14,000+ participants to predict conditions including AF, sleep apnea, hypertension, and diabetes with AUC 0.83-0.90."
+  },
+  {
+    "id": 178,
+    "chapter": 12,
+    "front": "What is the digital twin concept in cardiology?",
+    "back": "A cardiac digital twin is a patient-specific computational model of the heart built from imaging, ECG, and hemodynamic data. It simulates cardiac physiology and response to therapy, enabling personalized ablation planning, device programming, or drug testing."
+  },
+  {
+    "id": 179,
+    "chapter": 12,
+    "front": "What is automated coronary artery calcium (CAC) scoring using AI?",
+    "back": "AI tools automatically detect and quantify coronary artery calcium on non-contrast CT (including incidental chest CTs) and assign an Agatston score. This enables opportunistic CAC screening without dedicated cardiac CT acquisition."
+  },
+  {
+    "id": 180,
+    "chapter": 12,
+    "front": "What is the role of AI in catheterization lab decision support?",
+    "back": "AI tools integrated in cath labs analyze real-time angiography to assist with lesion assessment, stent sizing, and procedural guidance. AI-guided IVUS and OCT interpretation assist in optimizing PCI outcomes."
+  },
+  {
+    "id": 181,
+    "chapter": 13,
+    "front": "What is AI's role in cancer genomics and precision oncology?",
+    "back": "AI analyzes next-generation sequencing (NGS) data to identify driver mutations, predict tumor mutational burden, MSI status, and match patients to targeted therapies or clinical trials. Tools like Tempus and Foundation One use AI-assisted variant classification."
+  },
+  {
+    "id": 182,
+    "chapter": 13,
+    "front": "What is the role of AI in radiomics-based tumor characterization?",
+    "back": "AI-driven radiomics extracts quantitative imaging features from CT/MRI/PET to predict tumor grade, molecular subtype, response to therapy, and prognosis without biopsy. This enables non-invasive 'virtual biopsy' for treatment planning."
+  },
+  {
+    "id": 183,
+    "chapter": 13,
+    "front": "What is AI-based treatment response assessment in oncology?",
+    "back": "AI tools automate RECIST measurements on serial CT/MRI scans, reducing manual measurement variability and enabling automated trial endpoint adjudication. Deep learning models also detect early metabolic response on PET before morphological changes."
+  },
+  {
+    "id": 184,
+    "chapter": 13,
+    "front": "What is AI's role in radiotherapy treatment planning?",
+    "back": "AI automates organ-at-risk (OAR) segmentation, dose prediction, and plan optimization in radiation therapy planning, reducing planning time from hours to minutes while maintaining dosimetric quality comparable to manual expert planning."
+  },
+  {
+    "id": 185,
+    "chapter": 13,
+    "front": "What is the role of AI in immunotherapy response prediction?",
+    "back": "AI models integrating radiomics, pathology (TIL density), genomics (TMB, MSI), and clinical variables predict response to checkpoint inhibitors (anti-PD-1/PDL-1) more accurately than single biomarkers like PD-L1 IHC alone."
+  },
+  {
+    "id": 186,
+    "chapter": 13,
+    "front": "What is AI in drug repurposing for oncology?",
+    "back": "AI analyzes drug-target interaction networks, gene expression signatures, and molecular databases to identify existing approved drugs with potential efficacy against specific cancer subtypes, accelerating treatment development at lower cost."
+  },
+  {
+    "id": 187,
+    "chapter": 13,
+    "front": "What is the role of liquid biopsy AI in cancer monitoring?",
+    "back": "AI analyzes circulating tumor DNA (ctDNA) patterns from blood samples to detect residual disease, predict relapse, and monitor treatment response. Deep learning improves variant calling from cfDNA at allele fractions below 0.1%."
+  },
+  {
+    "id": 188,
+    "chapter": 13,
+    "front": "What is the Oncotype DX Recurrence Score and how does AI relate to it?",
+    "back": "Oncotype DX is a 21-gene expression assay that predicts breast cancer recurrence and chemotherapy benefit. AI models using digital pathology features (morphology-based) aim to predict Oncotype DX scores directly from H&E WSI, enabling cost-free surrogates."
+  },
+  {
+    "id": 189,
+    "chapter": 13,
+    "front": "What is AI-based early cancer detection using multi-analyte blood tests?",
+    "back": "Multi-cancer early detection (MCED) tests like Galleri (Grail) use AI to classify cancer signal-of-origin from cfDNA methylation patterns, detecting 50+ cancer types from a single blood draw with specificity >99% in high-risk populations."
+  },
+  {
+    "id": 190,
+    "chapter": 13,
+    "front": "What is microsatellite instability (MSI) and how does AI detect it from pathology slides?",
+    "back": "MSI is genomic instability from mismatch repair deficiency, predicting response to pembrolizumab. AI models analyze H&E WSI morphology to predict MSI status directly from histological features with AUC >0.80, without requiring molecular testing."
+  },
+  {
+    "id": 191,
+    "chapter": 13,
+    "front": "What is the Memorial Sloan Kettering IMPACT panel?",
+    "back": "MSK-IMPACT (Integrated Mutation Profiling of Actionable Cancer Targets) is an FDA-authorized 505-gene tumor sequencing panel. It identifies actionable mutations, TMB, and MSI for targeted therapy and immunotherapy selection."
+  },
+  {
+    "id": 192,
+    "chapter": 13,
+    "front": "What is AlphaFold and its significance for oncology drug discovery?",
+    "back": "AlphaFold (DeepMind, 2021) is an AI that predicts 3D protein structures from amino acid sequences with near-experimental accuracy. It accelerates drug target identification and structural-based drug design for novel oncology therapeutics."
+  },
+  {
+    "id": 193,
+    "chapter": 13,
+    "front": "What is the role of AI in matching patients to clinical trials?",
+    "back": "AI tools (e.g., TrialSpark, Tempus) use NLP to extract structured data from EHRs and match patients to open clinical trials based on eligibility criteria, dramatically reducing trial enrollment time and improving accrual rates."
+  },
+  {
+    "id": 194,
+    "chapter": 13,
+    "front": "What is survival prediction AI in oncology and what inputs does it typically use?",
+    "back": "Survival prediction AI uses pathology images, genomics, clinical staging, and treatment variables to estimate overall survival (OS) and progression-free survival (PFS). Multimodal models consistently outperform single-modality predictors."
+  },
+  {
+    "id": 195,
+    "chapter": 13,
+    "front": "What is NCCN and how do its guidelines intersect with AI-driven oncology decisions?",
+    "back": "NCCN (National Comprehensive Cancer Network) publishes evidence-based oncology treatment guidelines. AI tools in oncology decision support (e.g., IBM Watson, Tempus) are validated against NCCN concordance to ensure AI recommendations align with accepted standards."
+  },
+  {
+    "id": 196,
+    "chapter": 14,
+    "front": "What is AI-assisted chronic disease management in primary care?",
+    "back": "AI tools in primary care stratify panels for chronic diseases (diabetes, hypertension, COPD) to identify care gaps, predict complications, and automate care team outreach, enabling proactive management within value-based care models."
+  },
+  {
+    "id": 197,
+    "chapter": 14,
+    "front": "What is the role of AI in antibiotic stewardship in internal medicine?",
+    "back": "AI models predict antibiotic resistance patterns from clinical and microbiological data, recommend appropriate antibiotic selection and duration, and identify patients at risk for Clostridioides difficile, supporting antimicrobial stewardship programs."
+  },
+  {
+    "id": 198,
+    "chapter": 14,
+    "front": "What is the problem of 'note bloat' in EHRs and how does AI address it?",
+    "back": "Note bloat refers to lengthy, auto-populated EHR notes containing little actionable clinical content. AI tools (ambient documentation, note summarization) reduce bloat by generating concise, clinically focused notes from physician-patient conversations."
+  },
+  {
+    "id": 199,
+    "chapter": 14,
+    "front": "What is a preventive care gap analysis using AI and how does it function?",
+    "back": "AI analyzes a patient panel's structured EHR data to identify patients overdue for preventive services (colonoscopy, mammography, vaccines, HbA1c) relative to guideline recommendations, generating outreach lists for care coordinators."
+  },
+  {
+    "id": 200,
+    "chapter": 14,
+    "front": "What is the role of AI in diabetes management, specifically HbA1c prediction?",
+    "back": "AI models predict future HbA1c levels using prior HbA1c trends, medication adherence, weight, visit frequency, and SDoH factors, enabling proactive intensification of therapy before the next clinic visit."
+  },
+  {
+    "id": 201,
+    "chapter": 14,
+    "front": "What is the PCMH model and how does AI support it?",
+    "back": "The Patient-Centered Medical Home (PCMH) is a primary care model emphasizing comprehensive, coordinated, team-based care. AI supports PCMH by automating population health monitoring, care coordination alerts, and quality measure tracking."
+  },
+  {
+    "id": 202,
+    "chapter": 14,
+    "front": "What is AI-based fall risk prediction and what clinical variables does it typically use?",
+    "back": "Fall risk AI models use age, medications (anticholinergics, benzodiazepines, antihypertensives), prior fall history, gait speed, and cognitive status to predict inpatient and outpatient fall risk, enabling targeted preventive interventions."
+  },
+  {
+    "id": 203,
+    "chapter": 14,
+    "front": "What is medication reconciliation AI and where is it applied?",
+    "back": "Medication reconciliation AI compares medication lists across care transitions (admission, discharge, transfer) to identify discrepancies, omissions, and potential errors, reducing adverse drug events at care transition points."
+  },
+  {
+    "id": 204,
+    "chapter": 14,
+    "front": "What is AI-assisted prior authorization and what problem does it solve?",
+    "back": "AI automates prior authorization by extracting clinical criteria from EHR notes and submitting payer-required documentation, reducing administrative burden on physicians and decreasing delays to medically necessary treatment."
+  },
+  {
+    "id": 205,
+    "chapter": 14,
+    "front": "What is the role of AI in reducing physician burnout in primary care?",
+    "back": "AI-assisted ambient documentation (e.g., Nuance DAX, Suki), smart inbox management, and automated order routing reduce documentation burden, a leading driver of burnout. Studies show 30-50% reduction in documentation time with ambient AI."
+  },
+  {
+    "id": 206,
+    "chapter": 14,
+    "front": "What is AI in chronic pain management within primary care?",
+    "back": "AI tools flag opioid prescription patterns against CDC guidelines, identify patients at risk for opioid use disorder using behavioral and prescribing data, and recommend non-pharmacologic interventions for chronic pain management."
+  },
+  {
+    "id": 207,
+    "chapter": 14,
+    "front": "What is risk-adjusted performance benchmarking using AI in internal medicine?",
+    "back": "AI creates risk-adjusted quality metrics that account for patient complexity when comparing physician or hospital performance, preventing misleading quality rankings that arise when providers with sicker panels appear to perform worse without risk adjustment."
+  },
+  {
+    "id": 208,
+    "chapter": 14,
+    "front": "What is AI-assisted drug dosing in renal and hepatic impairment?",
+    "back": "AI tools integrated in CDSS automatically recommend dose adjustments for drugs cleared renally or hepatically based on real-time GFR (CKD-EPI), bilirubin, and Child-Pugh score, reducing adverse drug events from standard dosing in organ dysfunction."
+  },
+  {
+    "id": 209,
+    "chapter": 14,
+    "front": "What is care management stratification in internal medicine AI?",
+    "back": "Care management stratification uses AI to assign patients to appropriate care management tiers (e.g., complex care management, transitional care, wellness) based on predicted utilization, risk scores, and SDoH, aligning resource intensity with patient need."
+  },
+  {
+    "id": 210,
+    "chapter": 14,
+    "front": "What is the role of AI in identifying undiagnosed conditions from routine labs?",
+    "back": "AI scans routine lab patterns (CBC, BMP, LFTs) to flag signals of undiagnosed conditions (e.g., anemia requiring workup, new hyperglycemia, subclinical hypothyroidism), enabling earlier diagnosis during otherwise unremarkable routine encounters."
+  },
+  {
+    "id": 211,
+    "chapter": 15,
+    "front": "What is AI's role in emergency department triage?",
+    "back": "AI triage tools (e.g., Jvion, Epic Sepsis Model) analyze vitals, chief complaint, and EHR history at ED arrival to predict acuity, time to critical intervention, and admission likelihood, enabling smarter patient routing and resource allocation."
+  },
+  {
+    "id": 212,
+    "chapter": 15,
+    "front": "What is the SEWS (Standardized Early Warning Score) and how does AI improve upon it in the ED?",
+    "back": "SEWS assigns points based on vital sign deviations. AI models outperform SEWS by incorporating time-series vital trends, lab values, and EHR history to predict ICU transfer or in-hospital mortality with higher AUC (typically 0.82-0.88 vs. 0.72-0.78)."
+  },
+  {
+    "id": 213,
+    "chapter": 15,
+    "front": "What is the role of AI in CT interpretation for emergency stroke evaluation?",
+    "back": "AI tools (e.g., RapidAI, Viz.ai) auto-analyze CT/CTA at acquisition to detect large vessel occlusion, calculate ischemic core and penumbra volumes, and trigger real-time stroke team alerts, reducing time-to-treatment for thrombectomy eligibility."
+  },
+  {
+    "id": 214,
+    "chapter": 15,
+    "front": "What is the NIHSS scale and how does AI assist in documenting it?",
+    "back": "The NIH Stroke Scale is an 11-item neurological assessment scored 0-42. AI NLP tools extract NIHSS components from clinical notes or video assessments, enabling automated scoring and reducing documentation burden during acute stroke evaluation."
+  },
+  {
+    "id": 215,
+    "chapter": 15,
+    "front": "What is ED crowding and how does AI help predict and manage it?",
+    "back": "ED crowding occurs when patient volume exceeds capacity. AI models forecast patient arrival rates by time, day, and seasonal pattern, and predict ED length-of-stay, enabling proactive staffing adjustments and boarding mitigation strategies."
+  },
+  {
+    "id": 216,
+    "chapter": 15,
+    "front": "What is AI-assisted PE (pulmonary embolism) detection in the ED?",
+    "back": "AI tools (e.g., Aidoc PE, Intelerad) automatically flag CTPA studies with suspected PE, alerting radiologists and clinicians within minutes of scan completion. FDA-cleared tools reduce time to PE diagnosis by prioritizing worklist reads."
+  },
+  {
+    "id": 217,
+    "chapter": 15,
+    "front": "What is Point-of-Care Ultrasound (POCUS) AI and what does it enable?",
+    "back": "POCUS AI (e.g., Butterfly Network AI, Caption AI) guides probe placement and interprets ultrasound images for emergency applications (cardiac function, pneumothorax, DVT, volume status), enabling non-expert users to perform diagnostic-quality exams."
+  },
+  {
+    "id": 218,
+    "chapter": 15,
+    "front": "What is the HEART pathway and how does AI augment it in the ED?",
+    "back": "The HEART Pathway (History, ECG, Age, Risk factors, Troponin) risk stratifies chest pain for MACE. AI augments it by integrating serial troponin kinetics, continuous ECG features, and real-time risk recalculation to accelerate safe discharge decisions."
+  },
+  {
+    "id": 219,
+    "chapter": 15,
+    "front": "What is triage AI for sepsis in the ED and how early can it detect sepsis?",
+    "back": "Sepsis AI models applied at ED triage integrate chief complaint, vitals, and incoming labs to predict sepsis hours before clinical recognition. Models like COMPOSER and AutoTriage detect sepsis at AUC 0.80-0.87 before SIRS or qSOFA criteria are met."
+  },
+  {
+    "id": 220,
+    "chapter": 15,
+    "front": "What is AI-assisted X-ray reporting in the ED and what is its impact on throughput?",
+    "back": "AI tools (e.g., Qure.ai, Aidoc) provide instant automated reports for ED chest X-rays (fracture, pneumothorax, consolidation), enabling initial treatment decisions before radiologist reporting, reducing time-to-treatment for acute findings."
+  },
+  {
+    "id": 221,
+    "chapter": 15,
+    "front": "What is the role of AI in predicting ICU transfer from the ED?",
+    "back": "AI models predict which ED patients will require ICU-level care using vital signs, labs, and triage information, enabling proactive ICU bed reservation, early intensivist consultation, and resuscitation initiation before clinical deterioration."
+  },
+  {
+    "id": 222,
+    "chapter": 15,
+    "front": "What is a hospital command center and how does AI power it?",
+    "back": "A hospital command center (e.g., GE Health Command Center, Johns Hopkins capacity hub) integrates real-time feeds from EHR, bed management, labs, and imaging to an AI dashboard, predicting bottlenecks and guiding operational decisions across the entire hospital."
+  },
+  {
+    "id": 223,
+    "chapter": 15,
+    "front": "What is AI in trauma activation and what triage factors does it use?",
+    "back": "AI models for trauma triage use mechanism of injury, vital signs, age, and field assessment data to predict need for trauma team activation, hemorrhagic shock, or emergency surgery, reducing undertriage and overtriage compared to manual criteria."
+  },
+  {
+    "id": 224,
+    "chapter": 15,
+    "front": "What is the role of AI in medication error prevention in the ED?",
+    "back": "ED AI CDSS tools flag weight-based dosing errors, contraindicated medications in identified allergy patients, and inappropriate renal-dosed drugs, reducing medication errors in the high-acuity, high-pace ED environment."
+  },
+  {
+    "id": 225,
+    "chapter": 15,
+    "front": "What is natural language triage and how does AI apply it in the ED?",
+    "back": "Natural language triage uses NLP to analyze free-text chief complaint descriptions entered by triage nurses and automatically categorize patients by acuity and likely diagnosis, improving triage consistency and reducing human triage variability."
+  },
+  {
+    "id": 226,
+    "chapter": 16,
+    "front": "What is AI-assisted MS lesion detection on MRI?",
+    "back": "AI tools (e.g., icobrain ms) automatically segment T2/FLAIR lesions and gadolinium-enhancing lesions on brain MRI for multiple sclerosis monitoring. They quantify lesion volume and count, enabling standardized disease activity tracking across follow-up scans."
+  },
+  {
+    "id": 227,
+    "chapter": 16,
+    "front": "What is AI-based seizure detection from EEG and what does it enable?",
+    "back": "AI algorithms applied to continuous EEG detect ictal patterns and non-convulsive seizures automatically, alerting bedside staff. This enables earlier seizure identification in ICU patients with altered consciousness who cannot manifest clinical convulsions."
+  },
+  {
+    "id": 228,
+    "chapter": 16,
+    "front": "What is the role of AI in Alzheimer's disease early detection?",
+    "back": "AI models analyze amyloid PET scans, MRI hippocampal volumes, CSF biomarkers (Ab42, tau), and speech/language features to detect Alzheimer's pathology years before clinical symptom onset, enabling enrollment in secondary prevention trials."
+  },
+  {
+    "id": 229,
+    "chapter": 16,
+    "front": "What is automated brain volumetry and which AI tool is FDA-cleared for it?",
+    "back": "Automated brain volumetry quantifies regional brain volumes from MRI. NeuroQuant (CorTechs Labs) is an FDA-cleared tool that measures hippocampal volume and compares it to normative databases, aiding diagnosis of hippocampal atrophy in dementia."
+  },
+  {
+    "id": 230,
+    "chapter": 16,
+    "front": "What is gait analysis AI for neurological disease monitoring?",
+    "back": "AI analyzes video or wearable sensor data to quantify gait parameters (stride length, cadence, symmetry) in Parkinson's disease and stroke rehabilitation, enabling objective disease progression monitoring and response to therapy."
+  },
+  {
+    "id": 231,
+    "chapter": 16,
+    "front": "What is deep brain stimulation (DBS) programming AI?",
+    "back": "AI optimization algorithms (e.g., Abbott Vantage, Medtronic Percept) analyze intraoperative LFP recordings and clinical response to automate DBS parameter selection for Parkinson's disease, reducing programming time and improving symptom control."
+  },
+  {
+    "id": 232,
+    "chapter": 16,
+    "front": "What is AI in stroke rehabilitation and what does it enable?",
+    "back": "AI-powered robotic rehabilitation devices (e.g., Ekso, ReWalk) adapt training intensity to patient performance. AI predicts functional recovery trajectory post-stroke, enabling personalized therapy dosing and goal setting for physical and speech therapy."
+  },
+  {
+    "id": 233,
+    "chapter": 16,
+    "front": "What is the ASPECTS (Alberta Stroke Program Early CT Score) and how does AI apply?",
+    "back": "ASPECTS is a 10-point CT scoring system for ischemic changes in MCA territory, guiding thrombolysis eligibility. AI tools (e.g., e-ASPECTS by Brainomix) automate ASPECTS scoring from NCCT, reducing inter-rater variability and accelerating acute stroke triage."
+  },
+  {
+    "id": 234,
+    "chapter": 16,
+    "front": "What is speech analysis AI for neurological disease detection?",
+    "back": "AI analyzes speech features (pauses, dysarthria, rhythm, word recall) from recorded speech samples to detect Alzheimer's, Parkinson's, and ALS, providing a non-invasive digital biomarker for early diagnosis and monitoring."
+  },
+  {
+    "id": 235,
+    "chapter": 16,
+    "front": "What is AI-assisted brain tumor grading from MRI?",
+    "back": "AI radiomics and deep learning models analyze MRI features (T1CE, FLAIR, ADC maps) to predict WHO brain tumor grade (II-IV) and molecular markers (IDH, MGMT methylation) non-invasively, guiding surgical and treatment planning decisions."
+  },
+  {
+    "id": 236,
+    "chapter": 16,
+    "front": "What is AI's role in predicting epilepsy surgical outcome?",
+    "back": "AI models integrate MRI, EEG, neuropsychological, and semiology data to predict seizure-freedom after resective epilepsy surgery (Engel class I), helping identify optimal surgical candidates and counsel patients on expected outcomes."
+  },
+  {
+    "id": 237,
+    "chapter": 16,
+    "front": "What is automated pupillometry AI in neurocritical care?",
+    "back": "Automated infrared pupillometry (e.g., NPi, Neuroptics) quantifies pupil light reflex size and reactivity. AI analyzes serial NPi trends to detect intracranial hypertension and brain herniation earlier than clinical assessment in neurocritical care patients."
+  },
+  {
+    "id": 238,
+    "chapter": 16,
+    "front": "What is AI-based intracranial hemorrhage detection and what is its turnaround time?",
+    "back": "AI tools (e.g., Aidoc ICH, Viz.ai) detect intracranial hemorrhage on NCCT within seconds of scan completion and immediately page the neurology or neurosurgery team, reducing time-to-treatment for time-sensitive hemorrhagic emergencies."
+  },
+  {
+    "id": 239,
+    "chapter": 16,
+    "front": "What is the BraTS challenge?",
+    "back": "BraTS (Multimodal Brain Tumor Segmentation Challenge) is an annual international challenge for AI-based segmentation of glioma subregions (whole tumor, tumor core, enhancing tumor) from multi-parametric MRI, driving advances in neuro-oncology AI."
+  },
+  {
+    "id": 240,
+    "chapter": 16,
+    "front": "What is AI in pain assessment for non-verbal neurological patients?",
+    "back": "AI tools analyze facial expression (FACS coding), body movement, and vocal sounds to quantify pain in non-verbal patients (vegetative state, severe dementia, intubated ICU patients), enabling treatment when self-report is impossible."
+  },
+  {
+    "id": 241,
+    "chapter": 17,
+    "front": "What was the landmark 2016 study establishing AI performance in diabetic retinopathy screening?",
+    "back": "Gulshan et al. (JAMA, 2016) trained a deep CNN on 128,175 retinal fundus images, achieving AUC 0.991 for detecting referable diabetic retinopathy, exceeding the performance of ophthalmologists and establishing AI as a viable screening tool."
+  },
+  {
+    "id": 242,
+    "chapter": 17,
+    "front": "What is IDx-DR and what regulatory milestone did it achieve?",
+    "back": "IDx-DR (now LumineticsCore, Digital Diagnostics) is an FDA De Novo-authorized AI system for autonomous detection of diabetic retinopathy without physician interpretation. It was the first FDA-authorized device to make clinical diagnoses autonomously."
+  },
+  {
+    "id": 243,
+    "chapter": 17,
+    "front": "What is AI for glaucoma detection from fundus photography?",
+    "back": "AI models analyze optic disc morphology, cup-to-disc ratio, and RNFL patterns on fundus photographs to screen for glaucoma. Performance approaches that of glaucoma specialists, enabling opportunistic screening in primary care settings."
+  },
+  {
+    "id": 244,
+    "chapter": 17,
+    "front": "What is AI-based OCT analysis in macular degeneration?",
+    "back": "AI tools (e.g., DeepMind/Moorfields, Notal Vision) analyze OCT images to detect and quantify drusen, geographic atrophy, and subretinal fluid in age-related macular degeneration, predicting conversion to neovascular AMD to guide anti-VEGF injection timing."
+  },
+  {
+    "id": 245,
+    "chapter": 17,
+    "front": "What is the EyeArt system and what does it detect?",
+    "back": "EyeArt (Eyenuk) is an FDA-authorized AI system for autonomous diabetic retinopathy screening from color fundus photographs. It detects mild NPDR through PDR and DME, providing results in under a minute without a reading center."
+  },
+  {
+    "id": 246,
+    "chapter": 17,
+    "front": "What is retinal imaging as a window to systemic disease via AI?",
+    "back": "AI models trained on fundus photographs can predict systemic conditions including cardiovascular risk, blood pressure, HbA1c, age, and biological sex, demonstrating that the retina encodes systemic health information detectable by deep learning."
+  },
+  {
+    "id": 247,
+    "chapter": 17,
+    "front": "What is AI in screening for retinopathy of prematurity (ROP)?",
+    "back": "AI tools (e.g., i-ROP DL) analyze wide-field retinal images of premature infants to detect plus disease in ROP, potentially replacing the need for specialist in-person examinations in NICUs lacking pediatric ophthalmologists."
+  },
+  {
+    "id": 248,
+    "chapter": 17,
+    "front": "What is the ETDRS grading scale and how does AI use it for DR screening?",
+    "back": "The Early Treatment Diabetic Retinopathy Study scale grades DR severity 1-53, with referable DR defined as moderate NPDR or worse. AI models trained on ETDRS-graded datasets classify DR at the referable versus non-referable threshold for real-world screening deployment."
+  },
+  {
+    "id": 249,
+    "chapter": 17,
+    "front": "What is automated visual field analysis AI for glaucoma progression?",
+    "back": "AI models analyze serial Humphrey visual field test series to detect glaucoma progression faster than traditional trend analysis, reducing the number of tests needed to identify progression and enabling earlier therapeutic escalation."
+  },
+  {
+    "id": 250,
+    "chapter": 17,
+    "front": "What is the role of AI in anterior segment analysis using slit-lamp photography?",
+    "back": "AI tools analyze slit-lamp photographs to detect and classify anterior segment conditions (cataract grading, corneal pathology, angle closure risk), enabling telemedicine eye screening where ophthalmic slit-lamp examination is unavailable."
+  },
+  {
+    "id": 251,
+    "chapter": 17,
+    "front": "What is AI-based intraocular lens (IOL) power calculation?",
+    "back": "AI-based IOL formulas (e.g., Hill-RBF, Kane) use machine learning trained on large biometry datasets to predict post-cataract surgery refraction with higher accuracy than traditional vergence formulas (SRK/T, Holladay), reducing spectacle dependence after surgery."
+  },
+  {
+    "id": 252,
+    "chapter": 17,
+    "front": "What does 'telemedicine diabetic eye screening' AI enable in low-resource settings?",
+    "back": "AI enables camera-equipped primary care clinics to autonomously screen for diabetic retinopathy without on-site ophthalmologists. Images captured by trained technicians are analyzed in real time, results returned instantly, and referrals automatically generated."
+  },
+  {
+    "id": 253,
+    "chapter": 17,
+    "front": "What is AI in keratoconus detection from corneal topography?",
+    "back": "AI models (e.g., Belin/Ambrosio-Enhanced Ectasia) analyze Scheimpflug corneal topography data to detect subclinical keratoconus, preventing refractive surgery complications by identifying corneas at risk for post-LASIK ectasia."
+  },
+  {
+    "id": 254,
+    "chapter": 17,
+    "front": "What is the ophthalmology AI company Verily and its retinal imaging work?",
+    "back": "Verily (Google/Alphabet) collaborated with the Aravind Eye Care System to develop the Gulshan et al. DR AI (JAMA 2016). Verily continues research into multi-disease retinal AI for cardiovascular risk and AMD management."
+  },
+  {
+    "id": 255,
+    "chapter": 17,
+    "front": "What is optic nerve head (ONH) AI analysis and why is it important?",
+    "back": "AI models quantify optic disc morphology parameters (rim area, cup volume, RNFL thickness map) from fundus photos or OCT to detect early glaucomatous structural changes before visual field loss, enabling earlier diagnosis and treatment."
+  },
+  {
+    "id": 256,
+    "chapter": 18,
+    "front": "What did Esteva et al. 2017 demonstrate about AI in dermatology?",
+    "back": "Esteva et al. (Nature, 2017) showed that a CNN trained on 129,450 clinical skin images classified melanoma and keratinocyte carcinomas with accuracy on par with 21 board-certified dermatologists using 10-fold cross-validation."
+  },
+  {
+    "id": 257,
+    "chapter": 18,
+    "front": "What is dermoscopy AI and what is the HAM10000 dataset?",
+    "back": "Dermoscopy AI classifies skin lesions from polarized dermoscopy images. HAM10000 (Human Against Machine with 10,000 training images) is a benchmark dataset of 10,015 dermoscopy images across 7 classes used for the ISIC 2018 AI challenge."
+  },
+  {
+    "id": 258,
+    "chapter": 18,
+    "front": "What is the ISIC (International Skin Imaging Collaboration)?",
+    "back": "ISIC is a collaboration that curates the largest public dermoscopy image archive (>30,000 images) and hosts annual AI challenges for melanoma and skin lesion classification, serving as the primary benchmark for dermatology AI development."
+  },
+  {
+    "id": 259,
+    "chapter": 18,
+    "front": "What is the ABCDE criteria in melanoma and how does AI operationalize it?",
+    "back": "ABCDE (Asymmetry, Border, Color, Diameter, Evolution) guides clinical melanoma recognition. AI models extract these features computationally from dermoscopy images and combine them with deep-learned texture features to classify lesion malignancy risk."
+  },
+  {
+    "id": 260,
+    "chapter": 18,
+    "front": "What is the role of AI in psoriasis severity scoring?",
+    "back": "AI models analyze clinical photographs or dermoscopy images to automate PASI (Psoriasis Area and Severity Index) scoring, reducing inter-rater variability in clinical trials and enabling remote monitoring of disease activity for biologic therapy decisions."
+  },
+  {
+    "id": 261,
+    "chapter": 18,
+    "front": "What is teledermatology AI and what problem does it address?",
+    "back": "Teledermatology AI analyzes patient-captured smartphone skin images to triage lesions (urgent referral vs. watchful waiting), addressing the shortage of dermatologists and long wait times, particularly in rural and underserved populations."
+  },
+  {
+    "id": 262,
+    "chapter": 18,
+    "front": "What is the SkinVision app and what CE classification does it hold?",
+    "back": "SkinVision is a smartphone-based AI app for melanoma risk stratification from patient-captured images. It holds CE Class IIa marking in Europe and provides risk scores (low/medium/high) to guide dermatologist referral decisions."
+  },
+  {
+    "id": 263,
+    "chapter": 18,
+    "front": "What is the role of AI in wound care management?",
+    "back": "AI tools analyze wound photographs to measure wound area, depth, and tissue composition (granulation, slough, necrosis), enabling standardized wound healing progress tracking, remote monitoring, and automated dressing change recommendations."
+  },
+  {
+    "id": 264,
+    "chapter": 18,
+    "front": "What is hyperspectral imaging AI in dermatology?",
+    "back": "Hyperspectral imaging captures skin reflectance across hundreds of wavelengths beyond visible light. AI models analyze hyperspectral data to assess tissue oxygenation, melanin content, and collagen structure, improving melanoma margins detection and wound assessment."
+  },
+  {
+    "id": 265,
+    "chapter": 18,
+    "front": "What is confocal microscopy AI in dermatology?",
+    "back": "Reflectance confocal microscopy provides real-time cellular-level skin imaging without biopsy. AI analysis of confocal images automates classification of melanoma, BCC, and lentigo maligna with sensitivity comparable to expert dermatologists."
+  },
+  {
+    "id": 266,
+    "chapter": 18,
+    "front": "What is the limitation of AI skin cancer AI tools when applied to dark skin tones?",
+    "back": "Most dermoscopy AI training datasets are dominated by light-skinned patients (Fitzpatrick I-III). AI tools show significantly worse performance on darker skin tones (Fitzpatrick V-VI), raising health equity concerns that require diverse dataset curation."
+  },
+  {
+    "id": 267,
+    "chapter": 18,
+    "front": "What is AI in acne severity grading?",
+    "back": "AI models classify acne severity (IGA scale, Leeds scale) from facial photographs, enabling remote monitoring for isotretinoin therapy response and reducing in-person dermatology visits for acne follow-up in teledermatology programs."
+  },
+  {
+    "id": 268,
+    "chapter": 18,
+    "front": "What is the DermAssist app by Google Health?",
+    "back": "DermAssist (Google Health) uses a CNN to analyze patient-submitted photographs and questionnaire answers to provide ranked differential diagnoses for skin conditions. It received CE marking for use in the EU but is limited to informational use, not autonomous diagnosis."
+  },
+  {
+    "id": 269,
+    "chapter": 18,
+    "front": "What is the role of AI in patch test interpretation for contact dermatitis?",
+    "back": "AI image analysis standardizes reading of patch test reactions from clinical photographs, reducing inter-clinician variability in grading (negative, +, ++, +++) and enabling remote telemedicine patch test interpretation."
+  },
+  {
+    "id": 270,
+    "chapter": 18,
+    "front": "What is AI for nail disease detection (onychomycosis) from photographs?",
+    "back": "AI tools classify nail photographs to distinguish onychomycosis from psoriatic nail disease and healthy nails with accuracy comparable to trained dermatologists, enabling non-invasive screening that guides KOH preparation and fungal culture requests."
+  },
+  {
+    "id": 271,
+    "chapter": 19,
+    "front": "What is AI in suicide risk prediction and what regulatory guidance applies?",
+    "back": "AI models using NLP on clinical notes, EHR data, and structured questionnaires (PHQ-9, Columbia Scale) predict suicide attempt risk. The FDA considers these high-risk CDSS requiring rigorous clinical validation given potential harms from false positives and negatives."
+  },
+  {
+    "id": 272,
+    "chapter": 19,
+    "front": "What is the PHQ-9 and how does AI use it?",
+    "back": "The PHQ-9 (Patient Health Questionnaire-9) is a 9-item validated depression severity scale. AI tools analyze serial PHQ-9 scores alongside EHR variables to predict treatment response, remission, and depression relapse in primary care populations."
+  },
+  {
+    "id": 273,
+    "chapter": 19,
+    "front": "What is natural language processing applied to social media for mental health surveillance?",
+    "back": "NLP models analyze Twitter, Reddit, and Instagram posts to detect linguistic markers of depression, anxiety, and suicidal ideation at population level, enabling public health surveillance and early individual-level intervention programs."
+  },
+  {
+    "id": 274,
+    "chapter": 19,
+    "front": "What is Woebot and what mental health function does it serve?",
+    "back": "Woebot is an AI-powered chatbot delivering Cognitive Behavioral Therapy (CBT) principles via conversational interface. A 2017 RCT showed significant reduction in depression and anxiety scores after 2 weeks, supporting its use as a scalable digital mental health intervention."
+  },
+  {
+    "id": 275,
+    "chapter": 19,
+    "front": "What is voice biomarker AI in psychiatry?",
+    "back": "AI models analyze acoustic features (pitch variability, speech rate, pause frequency) from voice recordings to detect bipolar disorder, schizophrenia, depression, and PTSD, providing digital biomarkers for remote psychiatric monitoring."
+  },
+  {
+    "id": 276,
+    "chapter": 19,
+    "front": "What is digital phenotyping in mental health AI?",
+    "back": "Digital phenotyping uses smartphone sensor data (GPS, accelerometer, call logs, typing speed) to infer mental health state passively. AI analyzes behavioral patterns to detect mood episodes in bipolar disorder and predict psychotic relapse in schizophrenia."
+  },
+  {
+    "id": 277,
+    "chapter": 19,
+    "front": "What is the GAD-7 and how does AI support generalized anxiety disorder management?",
+    "back": "The GAD-7 (Generalized Anxiety Disorder 7-item scale) measures anxiety severity. AI CDSS tools flag patients with worsening GAD-7 trajectories for proactive outreach and therapeutic escalation in population mental health management programs."
+  },
+  {
+    "id": 278,
+    "chapter": 19,
+    "front": "What is AI in schizophrenia treatment monitoring?",
+    "back": "AI analyzes EHR data (hospitalization frequency, medication fill rates, ED visits) alongside wearable sensor data to predict psychotic relapse in schizophrenia, enabling early antipsychotic adjustment before crisis escalation."
+  },
+  {
+    "id": 279,
+    "chapter": 19,
+    "front": "What is the ethical concern about AI emotion recognition in psychiatry?",
+    "back": "AI emotion recognition systems infer emotional states from facial expressions or voice. Ethical concerns include lack of validity across cultures, potential bias against neurodivergent individuals, and the risk of coercive surveillance if used without informed consent."
+  },
+  {
+    "id": 280,
+    "chapter": 19,
+    "front": "What is AI-based treatment selection for depression (precision psychiatry)?",
+    "back": "Precision psychiatry AI models integrate EEG biomarkers (alpha asymmetry, theta cordance), genetic data, and clinical features to predict antidepressant vs. psychotherapy response, aiming to replace current trial-and-error treatment selection in MDD."
+  },
+  {
+    "id": 281,
+    "chapter": 19,
+    "front": "What is the SHAPS (Snaith-Hamilton Pleasure Scale) and AI anhedonia monitoring?",
+    "back": "SHAPS measures anhedonia (14 items). AI mood monitoring apps track SHAPS scores longitudinally alongside digital phenotyping data, providing continuous anhedonia severity estimates between clinical encounters for treatment adjustment."
+  },
+  {
+    "id": 282,
+    "chapter": 19,
+    "front": "What is AI in PTSD diagnosis and symptom tracking?",
+    "back": "AI analyzes PCL-5 scores, EHR history, and linguistic features of clinical notes to support PTSD diagnosis and track symptom burden over time. AI also powers VR-based PTSD exposure therapy with adaptive scenario difficulty."
+  },
+  {
+    "id": 283,
+    "chapter": 19,
+    "front": "What is crisis text line AI and how does it function?",
+    "back": "Crisis Text Line uses NLP to triage incoming text messages for suicide risk, automatically routing high-risk conversations to human counselors first. AI sentiment analysis enables prioritization across thousands of simultaneous chat sessions."
+  },
+  {
+    "id": 284,
+    "chapter": 19,
+    "front": "What is the Columbia Suicide Severity Rating Scale (C-SSRS) and its AI integration?",
+    "back": "C-SSRS is a structured interview tool classifying suicidal ideation and behavior. AI NLP tools automatically extract C-SSRS classifications from clinical notes, enabling population-level suicide risk monitoring without manual structured assessments."
+  },
+  {
+    "id": 285,
+    "chapter": 19,
+    "front": "What is AI in eating disorder detection and monitoring?",
+    "back": "AI NLP tools analyze social media content and clinical notes to identify linguistic markers associated with anorexia and bulimia. Wearable AI tracks physiological markers (heart rate variability) associated with restrictive eating behaviors for remote monitoring."
+  },
+  {
+    "id": 286,
+    "chapter": 20,
+    "front": "What is AI in neonatal sepsis prediction?",
+    "back": "AI models analyze continuous vital signs (HR, RR, SpO2, temperature) from NICU monitoring to predict neonatal late-onset sepsis 6-24 hours before clinical signs. Auricle (Masimo) and similar tools have demonstrated AUC >0.80 in VLBW infant cohorts."
+  },
+  {
+    "id": 287,
+    "chapter": 20,
+    "front": "What is AI-assisted retinopathy of prematurity (ROP) grading and which tool was studied?",
+    "back": "i-ROP DL (i-ROP Deep Learning) analyzes RetCam wide-field fundus images of premature infants to classify plus disease in ROP. It showed non-inferiority to expert ophthalmologists in published prospective studies, enabling NICU-based autonomous screening."
+  },
+  {
+    "id": 288,
+    "chapter": 20,
+    "front": "What is AI in pediatric radiograph interpretation and what challenge is unique to this population?",
+    "back": "AI tools for pediatric chest X-rays must accommodate growth-related anatomical changes and age-varying normal ranges. Models trained on adult data often perform poorly in children, requiring pediatric-specific training datasets and normative references."
+  },
+  {
+    "id": 289,
+    "chapter": 20,
+    "front": "What is the PEWS (Pediatric Early Warning Score) and how does AI improve it?",
+    "back": "PEWS uses vitals and clinical observations to flag deteriorating pediatric inpatients. AI models improve on PEWS by incorporating longitudinal vital trends, lab values, and age-adjusted norms, achieving AUC 0.85-0.91 for PICU transfer prediction."
+  },
+  {
+    "id": 290,
+    "chapter": 20,
+    "front": "What is AI in autism spectrum disorder (ASD) early detection?",
+    "back": "AI tools analyze video eye-tracking, social gaze patterns, and behavioral questionnaires (M-CHAT) to detect early ASD signs in toddlers. Computer vision models quantify social communication behaviors from videos, enabling earlier intervention referrals."
+  },
+  {
+    "id": 291,
+    "chapter": 20,
+    "front": "What is AI in pediatric growth monitoring?",
+    "back": "AI tools analyze serial height, weight, and BMI data against CDC and WHO growth charts to automatically flag growth faltering, precocious puberty, and obesity trajectories in electronic pediatric growth charts, prompting clinical evaluation."
+  },
+  {
+    "id": 292,
+    "chapter": 20,
+    "front": "What is AI for neonatal brain injury prediction from aEEG?",
+    "back": "AI algorithms analyze amplitude-integrated EEG (aEEG) patterns in neonates to detect hypoxic-ischemic encephalopathy severity and predict neurodevelopmental outcomes, guiding therapeutic hypothermia initiation and prognostic counseling."
+  },
+  {
+    "id": 293,
+    "chapter": 20,
+    "front": "What is AI in pediatric dosing calculations?",
+    "back": "AI-integrated CDSS tools calculate weight-based pediatric drug doses, flag round-off errors and 10-fold dosing mistakes, and adjust for renal and hepatic function, reducing the disproportionate rate of medication errors in pediatric patients."
+  },
+  {
+    "id": 294,
+    "chapter": 20,
+    "front": "What is AI for prediction of bronchopulmonary dysplasia (BPD) in premature infants?",
+    "back": "AI models using gestational age, birth weight, early ventilator settings, and CPAP data predict BPD development in VLBW infants, enabling early respiratory management optimization to reduce chronic lung disease severity."
+  },
+  {
+    "id": 295,
+    "chapter": 20,
+    "front": "What is AI in ADHD assessment?",
+    "back": "AI tools analyze continuous performance test data, actigraphy (movement patterns), and eye-tracking during tasks to provide objective markers for ADHD diagnosis, supplementing subjective rating scales (Conners) and reducing diagnostic subjectivity."
+  },
+  {
+    "id": 296,
+    "chapter": 20,
+    "front": "What is the role of AI in pediatric emergency triage?",
+    "back": "AI models applied at pediatric ED triage use age, vital signs, and chief complaint to predict acuity, time to critical intervention, and disposition, outperforming standard ESI triage scores in AUC for PICU admission and critical intervention prediction."
+  },
+  {
+    "id": 297,
+    "chapter": 20,
+    "front": "What is AI in newborn hearing screening quality control?",
+    "back": "AI analyzes automated auditory brainstem response (AABR) waveforms from universal newborn hearing screening to improve pass/fail classification accuracy, reducing false positive referral rates that cause parental anxiety and unnecessary audiological follow-up."
+  },
+  {
+    "id": 298,
+    "chapter": 20,
+    "front": "What is AI for genetic syndrome recognition from pediatric facial photographs?",
+    "back": "DeepGestalt (Face2Gene, FDNA) uses CNN analysis of facial photographs to recognize dysmorphic features associated with genetic syndromes. It achieves top-10 accuracy > 90% for hundreds of syndromes, assisting pediatricians and geneticists in diagnosis."
+  },
+  {
+    "id": 299,
+    "chapter": 20,
+    "front": "What is AI in neonatal pain assessment?",
+    "back": "AI tools use computer vision to analyze neonatal facial expressions (NFCS coding) and physiological signals to automate pain scoring in NICU patients, providing continuous, objective pain monitoring and guiding analgesic titration."
+  },
+  {
+    "id": 300,
+    "chapter": 20,
+    "front": "What is AI in pediatric allergy risk prediction?",
+    "back": "AI models using birth cohort data (genetics, microbiome, feeding history, early infections) predict development of allergic diseases (asthma, eczema, food allergy) in early childhood, enabling targeted early intervention (e.g., early peanut introduction per LEAP trial)."
+  },
+  {
+    "id": 301,
+    "chapter": 21,
+    "front": "What is GPT-4 and how has it performed on medical licensing exams?",
+    "back": "GPT-4 (OpenAI, 2023) is a large language model that passed the USMLE Step exams at or above passing threshold (~74%) and achieved high scores on specialty board exams (e.g., ABIM internal medicine), demonstrating strong medical question-answering capability."
+  },
+  {
+    "id": 302,
+    "chapter": 21,
+    "front": "What is hallucination in LLMs and why is it dangerous in clinical medicine?",
+    "back": "Hallucination refers to LLMs generating plausible-sounding but factually incorrect information. In clinical medicine, hallucinated drug doses, lab reference ranges, or diagnostic criteria can cause direct patient harm if outputs are acted upon without verification."
+  },
+  {
+    "id": 303,
+    "chapter": 21,
+    "front": "What is retrieval-augmented generation (RAG) and how does it improve LLM clinical reliability?",
+    "back": "RAG grounds LLM responses in retrieved documents (e.g., clinical guidelines, EHR notes, literature) rather than relying solely on parametric memory. It reduces hallucination and enables up-to-date, source-cited responses for clinical queries."
+  },
+  {
+    "id": 304,
+    "chapter": 21,
+    "front": "What is prompt engineering and why is it important for clinical LLM deployment?",
+    "back": "Prompt engineering is the practice of crafting inputs to LLMs to elicit accurate, clinically appropriate responses. Well-designed prompts specify role, context, and output format, reducing ambiguity and improving reliability for clinical documentation and decision support."
+  },
+  {
+    "id": 305,
+    "chapter": 21,
+    "front": "What is Med-PaLM 2 and what benchmark did it achieve?",
+    "back": "Med-PaLM 2 (Google, 2023) is an LLM fine-tuned on medical data that achieved expert-level performance (86.5%) on USMLE-style questions and was rated by physicians as providing safe, accurate, and helpful answers to consumer health questions."
+  },
+  {
+    "id": 306,
+    "chapter": 21,
+    "front": "What is the role of LLMs in clinical documentation?",
+    "back": "LLMs generate structured clinical notes (SOAP, discharge summaries, referral letters) from physician dictation or ambient conversation transcripts. They reduce documentation time by 30-50%, allowing physicians to spend more time on direct patient care."
+  },
+  {
+    "id": 307,
+    "chapter": 21,
+    "front": "What is an AI medical scribe and how does it differ from traditional transcription?",
+    "back": "An AI medical scribe (e.g., Nuance DAX, Suki, Abridge) uses LLMs and ASR to generate structured EHR notes from patient-physician conversations. Unlike transcription, it organizes content into clinical sections, maps to diagnoses and orders, and integrates directly into EHRs."
+  },
+  {
+    "id": 308,
+    "chapter": 21,
+    "front": "What is the concern about LLMs and patient privacy in clinical deployment?",
+    "back": "LLMs trained on or deployed with identifiable patient data raise HIPAA compliance concerns. Deployments must use HIPAA-compliant cloud instances, de-identification pipelines, and business associate agreements with LLM vendors to protect PHI."
+  },
+  {
+    "id": 309,
+    "chapter": 21,
+    "front": "What is context window and why does it matter for clinical LLM use?",
+    "back": "Context window is the maximum token length an LLM can process at once. Large context windows (128K-1M tokens in GPT-4-Turbo, Gemini 1.5 Pro) allow processing full patient records, lengthy guidelines, or entire clinical trial papers in a single query."
+  },
+  {
+    "id": 310,
+    "chapter": 21,
+    "front": "What is the concept of 'LLM as a clinical reasoning assistant' and what are its limitations?",
+    "back": "LLMs can synthesize complex clinical information, suggest differentials, and explain reasoning in natural language. Limitations include hallucination risk, static knowledge cutoffs, lack of physical examination capability, and inability to verify information against the specific patient."
+  },
+  {
+    "id": 311,
+    "chapter": 21,
+    "front": "What is fine-tuning an LLM for clinical specialties?",
+    "back": "Fine-tuning adapts a pretrained general LLM to a specific medical domain (e.g., radiology, cardiology) by training on specialty-specific text with preference learning (RLHF). It improves performance on domain-specific clinical tasks compared to general-purpose models."
+  },
+  {
+    "id": 312,
+    "chapter": 21,
+    "front": "What is the OpenAI GPT-4 diagnostic accuracy study by Kanjee et al. (2023)?",
+    "back": "Kanjee et al. (NEJM AI, 2023) evaluated GPT-4 on NEJM Case Records and found it generated the correct diagnosis in the top 3 differential diagnoses in 39% of cases, compared to 33% for conventional clinical reasoning models, but with significant hallucination."
+  },
+  {
+    "id": 313,
+    "chapter": 21,
+    "front": "What is the difference between a zero-shot, few-shot, and chain-of-thought prompt in clinical LLMs?",
+    "back": "Zero-shot: LLM answers without examples. Few-shot: LLM is given example Q&A pairs in the prompt. Chain-of-thought: LLM is instructed to reason step-by-step before answering. Chain-of-thought significantly improves clinical reasoning accuracy in LLMs."
+  },
+  {
+    "id": 314,
+    "chapter": 21,
+    "front": "What is the role of LLMs in patient-facing health communication?",
+    "back": "LLMs power patient-facing chatbots that answer health questions, explain diagnoses and medications, provide after-visit summaries, and triage symptoms. They must be validated for accuracy, safety, and health literacy alignment before patient deployment."
+  },
+  {
+    "id": 315,
+    "chapter": 21,
+    "front": "What is ACI Toolkit and how does it relate to LLMs in clinical settings?",
+    "back": "ACI (Ambient Clinical Intelligence) Toolkit frameworks (e.g., Microsoft-Nuance, Abridge) integrate LLMs into clinical workflows for ambient note generation, combining ASR, NLP, and LLM summarization to produce specialty-appropriate clinical documentation from encounter audio."
+  },
+  {
+    "id": 316,
+    "chapter": 22,
+    "front": "What is a generative AI model and how does it differ from a discriminative model?",
+    "back": "Generative AI models learn the joint probability distribution of data to generate new samples (e.g., GANs, VAEs, diffusion models, LLMs). Discriminative models learn to classify or predict labels. Generative AI creates novel content; discriminative AI assigns categories."
+  },
+  {
+    "id": 317,
+    "chapter": 22,
+    "front": "What is a diffusion model and its application in medical imaging?",
+    "back": "Diffusion models (e.g., DALL-E 3, Stable Diffusion) generate images by learning to reverse a noise-addition process. In medicine, they synthesize realistic CT, MRI, and pathology images for data augmentation, privacy-preserving dataset sharing, and rare disease training sets."
+  },
+  {
+    "id": 318,
+    "chapter": 22,
+    "front": "What is synthetic data generation and why is it valuable in healthcare AI?",
+    "back": "Synthetic data is AI-generated data statistically similar to real patient data but containing no actual PHI. It enables model training, algorithm testing, and data sharing without HIPAA privacy risk, addressing the major bottleneck of labeled clinical data scarcity."
+  },
+  {
+    "id": 319,
+    "chapter": 22,
+    "front": "What is GPT-4's role in generating clinical trial summaries and consent forms?",
+    "back": "GPT-4 can convert complex clinical trial protocols into plain-language summaries and patient-friendly consent forms, reducing health literacy barriers. Validation studies show LLM-generated consent forms have equivalent comprehension scores with reduced reading grade level."
+  },
+  {
+    "id": 320,
+    "chapter": 22,
+    "front": "What is generative AI in drug molecule design?",
+    "back": "Generative AI models (e.g., variational autoencoders, graph neural networks, diffusion models like DiffSBDD) design novel drug molecules by learning chemical structure-activity relationships, generating candidates with desired binding affinity and ADMET properties."
+  },
+  {
+    "id": 321,
+    "chapter": 22,
+    "front": "What is Insilico Medicine's AI drug discovery achievement?",
+    "back": "Insilico Medicine used generative AI (GENTRL) to identify a novel fibrosis drug target and generate the lead compound INS018_055 in 18 months at a fraction of traditional cost. The compound entered Phase II clinical trials in 2023, the first generative AI drug to do so."
+  },
+  {
+    "id": 322,
+    "chapter": 22,
+    "front": "What is AI-generated medical education content and what validation is required?",
+    "back": "Generative AI tools (GPT-4, Med-PaLM 2) can generate case vignettes, MCQs, and educational summaries for medical training. Validation requires expert clinical review for accuracy, bias checking, and alignment with current guidelines before use in accredited curricula."
+  },
+  {
+    "id": 323,
+    "chapter": 22,
+    "front": "What is a deepfake in healthcare and what harms can it cause?",
+    "back": "Deepfakes are AI-generated synthetic media (video, audio, images). In healthcare, malicious deepfakes could fabricate clinical consultations, falsify medical records, generate fake informed consent videos, or impersonate clinicians in telemedicine fraud."
+  },
+  {
+    "id": 324,
+    "chapter": 22,
+    "front": "What is AI-generated radiology report creation and what is its current regulatory status?",
+    "back": "LLMs and structured AI tools can draft preliminary radiology reports from image analysis outputs. As of 2024, fully autonomous AI-generated reports without radiologist sign-off are not FDA-cleared for clinical use; radiologist review and attestation remain required."
+  },
+  {
+    "id": 325,
+    "chapter": 22,
+    "front": "What is protein structure generation AI beyond AlphaFold?",
+    "back": "RFdiffusion (Baker Lab, 2022) uses diffusion models to design novel proteins with specified functions from scratch, not just predict structures of existing proteins. This enables de novo therapeutic protein design for vaccine antigens and targeted cancer therapy."
+  },
+  {
+    "id": 326,
+    "chapter": 22,
+    "front": "What are the copyright and intellectual property concerns with generative AI in medicine?",
+    "back": "Generative AI trained on copyrighted medical literature, pathology images, or proprietary clinical guidelines may reproduce protected content. Healthcare institutions must assess IP risk, obtain licensing, and implement usage policies for generative AI tools."
+  },
+  {
+    "id": 327,
+    "chapter": 22,
+    "front": "What is text-to-image AI in medical education?",
+    "back": "Text-to-image AI (e.g., DALL-E 3, Midjourney) generates anatomical diagrams, surgical illustrations, and pathology images from text descriptions, enabling rapid creation of medical educational materials without expensive medical illustrators."
+  },
+  {
+    "id": 328,
+    "chapter": 22,
+    "front": "What is the concept of 'AI hallucination in clinical trial literature generation'?",
+    "back": "LLMs generating clinical trial summaries or literature reviews can fabricate plausible-sounding but non-existent citations, study results, and statistical findings. Validation against source documents is mandatory before using LLM-generated literature in clinical decisions."
+  },
+  {
+    "id": 329,
+    "chapter": 22,
+    "front": "What is multimodal generative AI and its clinical application?",
+    "back": "Multimodal generative AI processes and generates combinations of text, images, and audio. Clinically, it enables simultaneous analysis of radiology images and clinical notes to generate integrated diagnostic reports or educational case presentations."
+  },
+  {
+    "id": 330,
+    "chapter": 22,
+    "front": "What is autonomous AI agent design in healthcare and what tasks can agents perform?",
+    "back": "Autonomous AI agents chain multiple LLM calls and tool use to complete multi-step healthcare tasks (e.g., chart review, literature search, prior auth drafting) with minimal human input. Clinical governance frameworks are needed to define scope, oversight, and liability."
+  },
+  {
+    "id": 331,
+    "chapter": 23,
+    "front": "What are the three FDA regulatory pathways for AI medical devices?",
+    "back": "510(k) clearance (substantial equivalence to a predicate), De Novo authorization (novel low-to-moderate risk), and Premarket Approval (PMA) for high-risk devices. Most FDA-cleared AI radiology tools use 510(k); IDx-DR used De Novo as the first autonomous AI diagnostic."
+  },
+  {
+    "id": 332,
+    "chapter": 23,
+    "front": "What is Software as a Medical Device (SaMD)?",
+    "back": "SaMD is software intended to perform medical functions without being part of a hardware medical device. The IMDRF classifies SaMD by severity of healthcare situation and significance of information provided to the clinical decision."
+  },
+  {
+    "id": 333,
+    "chapter": 23,
+    "front": "What is the FDA's predetermined change control plan (PCCP)?",
+    "back": "PCCP is a regulatory mechanism allowing AI/ML SaMD manufacturers to make predefined algorithm modifications after clearance without requiring a new 510(k) submission, enabling adaptive AI models to continuously improve while maintaining regulatory oversight."
+  },
+  {
+    "id": 334,
+    "chapter": 23,
+    "front": "How many AI/ML-enabled devices had the FDA cleared by end of 2023?",
+    "back": "The FDA had cleared over 950 AI/ML-enabled medical devices by the end of 2023, with radiology (diagnostic imaging) comprising over 75% of all clearances, reflecting the maturity of medical imaging AI relative to other clinical domains."
+  },
+  {
+    "id": 335,
+    "chapter": 23,
+    "front": "What is the EU AI Act's classification of high-risk AI in medicine?",
+    "back": "Under the EU AI Act (2024), AI systems used as safety components of medical devices or as diagnostic/treatment decision tools are classified as high-risk AI, requiring conformity assessment, transparency, accuracy documentation, and human oversight provisions."
+  },
+  {
+    "id": 336,
+    "chapter": 23,
+    "front": "What is a predicate device in the context of 510(k) clearance for AI?",
+    "back": "A predicate device is a legally marketed device to which an AI tool claims substantial equivalence. The 510(k) applicant must demonstrate the new device has the same intended use and equivalent safety/effectiveness to the predicate, enabling clearance without clinical trials."
+  },
+  {
+    "id": 337,
+    "chapter": 23,
+    "front": "What is the ONC Health IT Certification Program's relevance to AI CDSS?",
+    "back": "ONC certification ensures EHR and health IT products meet standards for interoperability, privacy, and safety. AI CDSS tools embedded in certified EHRs must comply with ONC criteria, and the program is evolving to include transparency and predictive decision support requirements."
+  },
+  {
+    "id": 338,
+    "chapter": 23,
+    "front": "What is the FDA Digital Health Center of Excellence (DHCoE)?",
+    "back": "The DHCoE is an FDA center established in 2020 to build expertise in digital health technologies, including AI/ML medical devices, mobile health, and Software as a Medical Device, providing guidance to industry and facilitating efficient regulatory pathways."
+  },
+  {
+    "id": 339,
+    "chapter": 23,
+    "front": "What is the MHRA (UK) AI medical device framework?",
+    "back": "MHRA (Medicines and Healthcare products Regulatory Agency) is the UK regulator for AI medical devices post-Brexit. It developed the Software and AI as a Medical Device change programme and participates in international AI medical device regulatory alignment with FDA and Health Canada."
+  },
+  {
+    "id": 340,
+    "chapter": 23,
+    "front": "What is the IMDRF AI framework for SaMD?",
+    "back": "The IMDRF (International Medical Device Regulators Forum) SaMD framework classifies AI medical software by risk category based on clinical severity and decision significance, providing a harmonized international framework that underpins FDA, MHRA, and Health Canada AI regulations."
+  },
+  {
+    "id": 341,
+    "chapter": 23,
+    "front": "What is a 510(k) Special Controls condition and how does it apply to AI diagnostics?",
+    "back": "Special Controls are device-specific requirements (performance standards, post-market surveillance, labeling) imposed on Class II devices cleared via 510(k) to provide reasonable assurance of safety and effectiveness when general controls alone are insufficient for AI diagnostic tools."
+  },
+  {
+    "id": 342,
+    "chapter": 23,
+    "front": "What is post-market surveillance for AI medical devices?",
+    "back": "Post-market surveillance monitors real-world performance of cleared AI devices after deployment. FDA requires Mandatory Device Reporting (MDR) for serious adverse events and may require post-approval studies to detect dataset shift, performance degradation, or bias emergence."
+  },
+  {
+    "id": 343,
+    "chapter": 23,
+    "front": "What is the 'locked' versus 'adaptive' AI algorithm classification for FDA regulatory purposes?",
+    "back": "A locked AI algorithm does not change behavior after deployment. An adaptive algorithm continues learning from new data post-deployment. Adaptive AI requires the PCCP framework, as its evolving behavior creates ongoing safety considerations beyond what a single pre-market review can address."
+  },
+  {
+    "id": 344,
+    "chapter": 23,
+    "front": "What is the Health Canada Digital Health framework for AI medical devices?",
+    "back": "Health Canada regulates AI medical devices under its Medical Devices Regulations, applying IMDRF SaMD risk classification. It issued guidance on ML-based SaMD in 2023, aligning with FDA PCCP concepts and requiring ongoing performance monitoring post-market."
+  },
+  {
+    "id": 345,
+    "chapter": 23,
+    "front": "What does CE marking Class IIa versus IIb mean for an AI diagnostic tool in Europe?",
+    "back": "Class IIa (medium risk) CE-marked AI diagnostics (e.g., DR screening) require a technical file with clinical evidence reviewed by a notified body. Class IIb (higher risk) requires more rigorous conformity assessment with clinical investigations, corresponding to higher-stakes diagnostic AI."
+  },
+  {
+    "id": 346,
+    "chapter": 24,
+    "front": "What is the Apple Watch ECG feature and its FDA clearance status?",
+    "back": "The Apple Watch Series 4 ECG app received FDA De Novo clearance in 2018 to classify sinus rhythm versus atrial fibrillation from a single-lead ECG waveform recorded by the optical heart sensor, the first consumer smartwatch to receive this clearance."
+  },
+  {
+    "id": 347,
+    "chapter": 24,
+    "front": "What is continuous glucose monitoring (CGM) and how does AI enhance it?",
+    "back": "CGM (e.g., Dexacom G7, Libre 3) measures interstitial glucose every 1-5 minutes. AI algorithms predict hypoglycemia 30-60 minutes in advance using glucose trend data, activity, and meal patterns, enabling proactive insulin dose adjustments and alerts."
+  },
+  {
+    "id": 348,
+    "chapter": 24,
+    "front": "What is a closed-loop insulin delivery system (artificial pancreas) and its AI component?",
+    "back": "A closed-loop system (e.g., Medtronic MiniMed 780G, Tandem Control-IQ) combines CGM and insulin pump with an AI control algorithm that autonomously adjusts basal insulin delivery to maintain target glucose, reducing hypoglycemia and HbA1c versus open-loop therapy."
+  },
+  {
+    "id": 349,
+    "chapter": 24,
+    "front": "What is the BodyGuardian MINI and its remote monitoring application?",
+    "back": "BodyGuardian MINI (Preventice Solutions) is a FDA-cleared wireless patch monitor capturing ECG, respiratory rate, posture, and activity. AI analyzes the continuous data stream for arrhythmia and clinical deterioration events, enabling remote cardiac monitoring outside hospital."
+  },
+  {
+    "id": 350,
+    "chapter": 24,
+    "front": "What is a digital therapeutic (DTx) and how does it differ from a wellness app?",
+    "back": "A DTx (digital therapeutic) is an FDA-regulated, evidence-based software treatment for a disease or disorder. Unlike a wellness app (unregulated, general health), a DTx has clinical trial evidence, FDA clearance, and a specific therapeutic indication (e.g., reSET-O for opioid use disorder)."
+  },
+  {
+    "id": 351,
+    "chapter": 24,
+    "front": "What is photoplethysmography (PPG) and what can AI infer from it in wearables?",
+    "back": "PPG uses light sensors to detect blood volume changes with each heartbeat. AI applied to wearable PPG signals can detect atrial fibrillation, estimate blood pressure, assess sleep stages, and predict SpO2 without arterial blood gas measurement."
+  },
+  {
+    "id": 352,
+    "chapter": 24,
+    "front": "What is RPM (Remote Patient Monitoring) and its CMS reimbursement status?",
+    "back": "RPM uses connected devices to collect patient health data outside clinical settings and transmit it to providers. CMS reimburses RPM under CPT codes 99453-99458, covering device setup, data collection, and care management for chronic conditions."
+  },
+  {
+    "id": 353,
+    "chapter": 24,
+    "front": "What is the Kardia Mobile ECG device and its FDA clearance?",
+    "back": "Kardia Mobile (AliveCor) is an FDA-cleared single-lead ECG device for smartphones that uses AI to classify normal sinus rhythm, AF, bradycardia, and tachycardia. Kardia 6L expanded to a 6-lead ECG with AI interpretation of 12 rhythm conditions."
+  },
+  {
+    "id": 354,
+    "chapter": 24,
+    "front": "What is sleep apnea AI detection from wearables?",
+    "back": "AI algorithms analyze actigraphy, PPG, respiratory effort, and SpO2 from wearable devices (Withings, Fitbit, Apple Watch) to estimate sleep apnea severity, enabling population-level screening that guides formal polysomnography referral."
+  },
+  {
+    "id": 355,
+    "chapter": 24,
+    "front": "What is continuous blood pressure monitoring from wearables using AI?",
+    "back": "AI estimates blood pressure from wearable PPG waveform morphology (pulse transit time, pulse wave analysis). FDA-cleared cuffless BP devices (e.g., Samsung Galaxy Watch with SBP estimation) use ML models for ambulatory BP monitoring without inflatable cuffs."
+  },
+  {
+    "id": 356,
+    "chapter": 24,
+    "front": "What is activity recognition AI in chronic disease remote monitoring?",
+    "back": "AI classifies physical activity type and intensity from accelerometer/gyroscope data in wearables (steps, falls, exercise type). In COPD and heart failure, reduced activity scores predict exacerbation and hospitalization, enabling proactive outreach."
+  },
+  {
+    "id": 357,
+    "chapter": 24,
+    "front": "What is the Oura Ring's AI health monitoring capability?",
+    "back": "The Oura Ring tracks HRV, sleep stages, temperature, SpO2, and activity using optical sensors. AI generates daily Readiness, Sleep, and Activity scores and has been studied for early illness detection (COVID-19 febrile detection 24-72 hours before symptom onset)."
+  },
+  {
+    "id": 358,
+    "chapter": 24,
+    "front": "What is the Vivify Health remote monitoring platform?",
+    "back": "Vivify Health is a connected care platform that aggregates wearable and patient-reported data for chronic disease management. AI-driven alerts notify care managers when patient data exceeds predefined thresholds, enabling proactive intervention for congestive heart failure, COPD, and diabetes."
+  },
+  {
+    "id": 359,
+    "chapter": 24,
+    "front": "What is the role of AI in predicting heart failure decompensation from implantable devices?",
+    "back": "AI analyzes data from cardiac implantable devices (ICDs, CRT-D) including intrathoracic impedance (OptiVol), daily HR, HRV, and activity to predict HF decompensation 1-2 weeks before hospitalization, enabling early diuretic adjustment or clinic visit."
+  },
+  {
+    "id": 360,
+    "chapter": 24,
+    "front": "What is the digital biomarker concept in remote monitoring?",
+    "back": "A digital biomarker is a physiological or behavioral measure collected from connected digital tools that correlates with a health outcome or biological process. AI transforms raw sensor data into validated digital biomarkers (e.g., gait speed as a frailty biomarker)."
+  },
+  {
+    "id": 361,
+    "chapter": 25,
+    "front": "What is federated learning and why is it important for healthcare AI?",
+    "back": "Federated learning trains AI models across multiple institutions by sharing model gradients rather than raw patient data. It enables collaborative model development without centralizing sensitive health data, addressing privacy, regulatory, and data governance barriers."
+  },
+  {
+    "id": 362,
+    "chapter": 25,
+    "front": "What is differential privacy and how does it protect patient data in AI?",
+    "back": "Differential privacy adds mathematically calibrated noise to query outputs so that individual records cannot be identified. It provides a formal privacy guarantee for AI models trained on or queried against clinical databases."
+  },
+  {
+    "id": 363,
+    "chapter": 25,
+    "front": "What is secure multi-party computation (SMPC) in healthcare AI?",
+    "back": "SMPC is a cryptographic technique enabling multiple parties to jointly compute a function over their data without any party revealing their input to others. It enables privacy-preserving analytics across competing hospital systems without data sharing agreements."
+  },
+  {
+    "id": 364,
+    "chapter": 25,
+    "front": "What is the FeTS (Federated Tumor Segmentation) initiative?",
+    "back": "FeTS is an international federated learning consortium for brain tumor segmentation, uniting 30+ institutions to train a shared glioma segmentation model without sharing patient MRI data. It demonstrated that federated models match or exceed centrally trained models."
+  },
+  {
+    "id": 365,
+    "chapter": 25,
+    "front": "What is homomorphic encryption and its potential in clinical AI?",
+    "back": "Homomorphic encryption allows computation on encrypted data without decrypting it. In clinical AI, it could enable a cloud AI model to analyze encrypted patient records and return encrypted results, with only the clinician able to decrypt the output."
+  },
+  {
+    "id": 366,
+    "chapter": 25,
+    "front": "What is the NVIDIA FLARE platform?",
+    "back": "NVIDIA FLARE (Federated Learning Application Runtime Environment) is an open-source framework for deploying federated learning in healthcare. It supports differential privacy plugins, cross-silo federation across hospital networks, and integration with DICOM and EHR workflows."
+  },
+  {
+    "id": 367,
+    "chapter": 25,
+    "front": "What is model poisoning in federated learning and how is it mitigated?",
+    "back": "Model poisoning occurs when a malicious participant submits adversarial gradient updates to corrupt the global federated model. Mitigation strategies include robust aggregation (Krum, Trimmed Mean), anomaly detection of gradient outliers, and participant credentialing."
+  },
+  {
+    "id": 368,
+    "chapter": 25,
+    "front": "What is the difference between horizontal and vertical federated learning in healthcare?",
+    "back": "Horizontal federated learning trains across institutions sharing the same feature space (e.g., multiple hospitals with the same EHR variables). Vertical FL trains across institutions with different features on the same patient population (e.g., hospital EHR + payer claims data)."
+  },
+  {
+    "id": 369,
+    "chapter": 25,
+    "front": "What is the 'honest but curious' adversary model in privacy-preserving AI?",
+    "back": "An honest-but-curious adversary follows the protocol correctly but attempts to infer private information from observed data (model weights, gradients). Privacy-preserving AI protocols must protect against this threat model, which is common in multi-institutional collaborations."
+  },
+  {
+    "id": 370,
+    "chapter": 25,
+    "front": "What is the HIPAA Safe Harbor de-identification method and its limitation for AI datasets?",
+    "back": "HIPAA Safe Harbor removes 18 specified PHI identifiers from datasets. Its limitation for AI is that modern re-identification attacks using auxiliary data (demographics, location) can re-identify individuals from 'de-identified' datasets, requiring stronger privacy guarantees like k-anonymity or differential privacy."
+  },
+  {
+    "id": 371,
+    "chapter": 25,
+    "front": "What is the EU GDPR's impact on AI model training with patient data?",
+    "back": "GDPR requires legal basis (consent or legitimate interest), data minimization, and explicit patient rights (erasure, portability) for processing health data. It restricts cross-border EU patient data transfers for AI training to countries with adequate data protection frameworks."
+  },
+  {
+    "id": 372,
+    "chapter": 25,
+    "front": "What is synthetic data versus anonymized data for AI privacy?",
+    "back": "Anonymized data removes or transforms identifiers from real records. Synthetic data is entirely AI-generated to mimic statistical properties of real data. Synthetic data provides stronger privacy guarantees but may not capture rare clinical subgroups accurately."
+  },
+  {
+    "id": 373,
+    "chapter": 25,
+    "front": "What is the Intel-Penn Medicine federated learning achievement?",
+    "back": "Intel and University of Pennsylvania led a federated learning consortium across 29 international institutions to train a glioblastoma segmentation model, demonstrating 33% improvement over local models and establishing federated learning as viable for rare disease AI."
+  },
+  {
+    "id": 374,
+    "chapter": 25,
+    "front": "What is the concept of a 'data trust' in healthcare AI governance?",
+    "back": "A data trust is a legal and organizational structure in which multiple healthcare institutions collectively govern shared data assets under predefined rules. It enables AI development from pooled data while ensuring participating institutions retain rights over their data contributions."
+  },
+  {
+    "id": 375,
+    "chapter": 25,
+    "front": "What is k-anonymity and why is it insufficient for modern clinical AI privacy?",
+    "back": "k-anonymity ensures each record is indistinguishable from at least k-1 others by generalizing or suppressing quasi-identifiers. It is insufficient for modern AI because attribute linkage attacks using auxiliary data can still re-identify individuals even in k-anonymous datasets."
+  },
+  {
+    "id": 376,
+    "chapter": 26,
+    "front": "What is whole genome sequencing (WGS) and how does AI support its clinical interpretation?",
+    "back": "WGS sequences all 3 billion base pairs of a patient's genome. AI tools classify variants of uncertain significance (VUS), predict pathogenicity, prioritize candidate disease genes, and generate clinical reports, reducing the months-long analysis bottleneck."
+  },
+  {
+    "id": 377,
+    "chapter": 26,
+    "front": "What is polygenic risk score (PRS) and how is AI used in its development?",
+    "back": "A PRS sums the effects of hundreds to millions of genetic variants to estimate an individual's inherited risk for complex diseases (e.g., coronary artery disease, breast cancer). ML methods optimize variant weighting and enable PRS to account for genetic ancestry interactions."
+  },
+  {
+    "id": 378,
+    "chapter": 26,
+    "front": "What is the role of AI in pharmacogenomics?",
+    "back": "AI integrates pharmacogenomic data (CYP2D6, CYP2C19, TPMT, DPYD variants) with clinical prescribing data to provide real-time genotype-guided dosing recommendations, reducing adverse drug reactions from drugs with narrow therapeutic indices."
+  },
+  {
+    "id": 379,
+    "chapter": 26,
+    "front": "What is the GATK pipeline and how does AI augment it?",
+    "back": "GATK (Genome Analysis Toolkit, Broad Institute) is the standard bioinformatics pipeline for germline and somatic variant calling from NGS data. Deep learning tools (e.g., DeepVariant, Google) achieve higher precision and recall in variant calling than GATK HaplotypeCaller."
+  },
+  {
+    "id": 380,
+    "chapter": 26,
+    "front": "What is DeepVariant and what did it demonstrate?",
+    "back": "DeepVariant (Google, 2018, Nature Biotechnology) uses a CNN to classify genetic variants from pileup images of sequencing reads, achieving significantly higher accuracy than traditional GATK-based callers on Illumina, PacBio, and Oxford Nanopore sequencing data."
+  },
+  {
+    "id": 381,
+    "chapter": 26,
+    "front": "What is AI in RNA splicing variant prediction?",
+    "back": "AI tools (e.g., SpliceAI, Pangolin) predict the effect of genomic variants on RNA splicing using deep learning, identifying pathogenic splicing variants that are missed by conventional annotation tools, improving diagnostic yield of clinical exome sequencing."
+  },
+  {
+    "id": 382,
+    "chapter": 26,
+    "front": "What is single-cell RNA sequencing (scRNA-seq) and what role does AI play?",
+    "back": "scRNA-seq measures gene expression in individual cells, revealing cell type heterogeneity. AI tools (Seurat, Scanpy, scVI) cluster cells, annotate cell types, identify trajectory dynamics, and detect rare cell populations relevant to disease mechanisms."
+  },
+  {
+    "id": 383,
+    "chapter": 26,
+    "front": "What is the role of AI in CRISPR guide RNA design?",
+    "back": "AI tools (e.g., DeepCRISPR, Azimuth, Rule Set 3) predict CRISPR-Cas9 guide RNA on-target efficiency and off-target cleavage risk using sequence and epigenomic features, optimizing guide selection to maximize editing efficacy and minimize unintended edits."
+  },
+  {
+    "id": 384,
+    "chapter": 26,
+    "front": "What is the ACMG classification of sequence variants and how does AI assist?",
+    "back": "ACMG/AMP guidelines classify germline variants as Pathogenic, Likely Pathogenic, VUS, Likely Benign, or Benign based on 28 criteria. AI tools automate evidence aggregation and classification, reducing the time for clinical laboratory variant interpretation from hours to minutes."
+  },
+  {
+    "id": 385,
+    "chapter": 26,
+    "front": "What is the ClinVar database and its relevance to AI variant classification?",
+    "back": "ClinVar is an NCBI public archive of relationships between genetic variants and human health phenotypes. AI tools query ClinVar as a knowledge base for prior classification evidence during automated ACMG variant classification, leveraging aggregated clinical expertise at scale."
+  },
+  {
+    "id": 386,
+    "chapter": 26,
+    "front": "What is metagenomics AI and its clinical application?",
+    "back": "Clinical metagenomics sequences all microbial DNA from a patient sample (CSF, BAL, blood) to identify pathogens without culture. AI tools classify metagenomic reads, detect novel pathogens, and predict antimicrobial resistance genes, enabling rapid diagnosis of culture-negative infections."
+  },
+  {
+    "id": 387,
+    "chapter": 26,
+    "front": "What is multiomics integration AI in clinical genomics?",
+    "back": "Multiomics AI integrates genomics, transcriptomics, proteomics, and epigenomics data using deep learning or factor models to identify biomarkers, disease subtypes, and therapeutic targets that are invisible when single omics layers are analyzed in isolation."
+  },
+  {
+    "id": 388,
+    "chapter": 26,
+    "front": "What is the Genomics England 100,000 Genomes Project?",
+    "back": "Genomics England sequenced 100,000 whole genomes from NHS patients with rare diseases and cancer, creating one of the largest clinical WGS datasets. It is a foundational AI training resource for rare disease diagnosis and cancer genomic biomarker discovery."
+  },
+  {
+    "id": 389,
+    "chapter": 26,
+    "front": "What is the Phenopacket standard and its role in clinical genomics AI?",
+    "back": "Phenopackets are a GA4GH-developed structured standard for clinical phenotype data linked to genetic findings. AI-driven rare disease diagnosis tools use phenopacket-formatted HPO phenotype data to query gene-phenotype databases and prioritize candidate diagnoses."
+  },
+  {
+    "id": 390,
+    "chapter": 26,
+    "front": "What is long-read sequencing AI and its advantage over short-read for clinical genomics?",
+    "back": "Long-read sequencing (PacBio HiFi, Oxford Nanopore) generates reads >10 kbp, resolving structural variants and repeat expansions invisible to short-read sequencing. AI tools specifically trained on long-read data improve SV calling accuracy for conditions like FMR1 and C9orf72 expansion diseases."
+  },
+  {
+    "id": 391,
+    "chapter": 27,
+    "front": "What is the AI governance framework recommended for clinical AI implementation?",
+    "back": "An institutional AI governance framework includes a multidisciplinary oversight committee, defined roles for clinical leads and data scientists, pre-deployment validation requirements, post-deployment monitoring protocols, and clear policies for bias review and model retirement."
+  },
+  {
+    "id": 392,
+    "chapter": 27,
+    "front": "What is the concept of 'clinical workflow integration' and why does it determine AI adoption success?",
+    "back": "Clinical workflow integration embeds AI outputs directly into clinician workflows (EHR alerts, worklist flags, documentation templates) rather than requiring separate logins or portals. Studies show AI tools requiring workflow disruption have much lower adoption rates than seamlessly integrated tools."
+  },
+  {
+    "id": 393,
+    "chapter": 27,
+    "front": "What is a vendor contract consideration unique to clinical AI procurement?",
+    "back": "AI vendor contracts must address data ownership, model update notification, performance monitoring obligations, bias audit requirements, regulatory status, and liability allocation for adverse outcomes from AI-generated recommendations."
+  },
+  {
+    "id": 394,
+    "chapter": 27,
+    "front": "What is the role of clinical champions in AI implementation?",
+    "back": "Clinical champions are physician or nursing leaders who advocate for and guide AI deployment within their specialty. They validate clinical appropriateness, facilitate staff training, monitor performance feedback, and serve as the interface between data science teams and frontline clinicians."
+  },
+  {
+    "id": 395,
+    "chapter": 27,
+    "front": "What is an AI implementation pilot study and what metrics should it measure?",
+    "back": "A pilot study deploys AI in a limited clinical environment before full rollout. Key metrics include clinical performance (AUC, sensitivity, specificity), workflow impact (alert burden, override rates, documentation time), and clinician satisfaction and trust."
+  },
+  {
+    "id": 396,
+    "chapter": 27,
+    "front": "What is the role of training and education in AI implementation?",
+    "back": "Clinician AI literacy training covers model limitations, appropriate use cases, interpretation of confidence scores, and failure mode recognition. Without adequate training, clinicians either over-rely on AI outputs (automation bias) or dismiss them without due consideration."
+  },
+  {
+    "id": 397,
+    "chapter": 27,
+    "front": "What is automation bias and how does it affect clinical AI safety?",
+    "back": "Automation bias is the tendency to follow AI recommendations without critical evaluation, even when incorrect. In clinical AI, automation bias can lead clinicians to miss diagnoses the AI predicted negative or accept incorrect AI recommendations without independent judgment."
+  },
+  {
+    "id": 398,
+    "chapter": 27,
+    "front": "What is the build-versus-buy decision in clinical AI and what factors influence it?",
+    "back": "The build-versus-buy decision weighs institutional capability (data scientists, infrastructure), time-to-deployment, regulatory burden, and cost. Most health systems opt to buy vendor solutions for well-defined problems (e.g., sepsis prediction) and build internally for highly institution-specific workflows."
+  },
+  {
+    "id": 399,
+    "chapter": 27,
+    "front": "What is a clinical AI registry and why is it being developed?",
+    "back": "A clinical AI registry is a centralized catalog of all AI tools deployed within a health system, tracking their regulatory status, performance benchmarks, validation data, oversight responsibilities, and update history to ensure institutional accountability."
+  },
+  {
+    "id": 400,
+    "chapter": 27,
+    "front": "What is an ROI (return on investment) framework for clinical AI implementation?",
+    "back": "ROI for clinical AI includes direct cost savings (reduced redundant testing, shorter LOS), revenue enhancement (coding accuracy, throughput), quality metric improvement (readmission rates, mortality), and intangible benefits (clinician satisfaction, patient experience)."
+  },
+  {
+    "id": 401,
+    "chapter": 27,
+    "front": "What is the concept of 'shadow mode' deployment for clinical AI?",
+    "back": "Shadow mode runs an AI model in parallel with existing clinical workflows without displaying results to clinicians. It validates real-world performance before go-live, identifies failure modes and dataset drift, and establishes baseline metrics without patient safety risk."
+  },
+  {
+    "id": 402,
+    "chapter": 27,
+    "front": "What is the role of informaticists in AI implementation?",
+    "back": "Clinical informaticists bridge clinical knowledge and technical AI implementation, translating clinical requirements into technical specifications, ensuring EHR integration, and overseeing data quality pipelines that feed clinical AI models with accurate, timely inputs."
+  },
+  {
+    "id": 403,
+    "chapter": 27,
+    "front": "What is a 'fail-safe' in clinical AI system design?",
+    "back": "A fail-safe is a backup mechanism that ensures safe clinical operation when an AI system fails, becomes unavailable, or produces uncertain outputs. It may include automatic reversion to standard workflow, clinician notification, and fallback to rule-based alerts."
+  },
+  {
+    "id": 404,
+    "chapter": 27,
+    "front": "What is the CHAI (Coalition for Health AI) and what does it provide?",
+    "back": "CHAI (Coalition for Health AI) is a not-for-profit industry body that developed a Blueprint for Trustworthy AI Implementation Guidance and Assurance Scorecard (BIAS scorecard), providing healthcare organizations a structured framework for evaluating and governing clinical AI tools."
+  },
+  {
+    "id": 405,
+    "chapter": 27,
+    "front": "What is an AI 'use case library' in a health system?",
+    "back": "A use case library is a curated catalog of validated, prioritized AI applications mapped to clinical problems, evidence strength, and implementation readiness. It guides health system leadership in AI investment decisions by matching problems to mature, evidence-supported solutions."
+  },
+  {
+    "id": 406,
+    "chapter": 28,
+    "front": "What is the Optum racial bias study and what did it reveal?",
+    "back": "Obermeyer et al. (Science, 2019) analyzed a commercial risk algorithm using health costs as a proxy for health need. They found Black patients assigned the same risk score as White patients were actually much sicker, demonstrating that cost-based proxies encode historical healthcare disparities."
+  },
+  {
+    "id": 407,
+    "chapter": 28,
+    "front": "What are the three main types of fairness metrics used in clinical AI?",
+    "back": "Demographic parity (equal positive prediction rates across groups), equalized odds (equal TPR and FPR across groups), and calibration within groups (equal predicted vs. observed risk). Achieving all three simultaneously is mathematically impossible under most conditions (fairness impossibility theorem)."
+  },
+  {
+    "id": 408,
+    "chapter": 28,
+    "front": "What is the 'proxy discrimination' problem in clinical AI?",
+    "back": "Proxy discrimination occurs when AI uses seemingly neutral variables (ZIP code, insurance type) that are correlated with protected attributes (race, income) to make decisions, perpetuating discrimination indirectly without using explicit demographic variables."
+  },
+  {
+    "id": 409,
+    "chapter": 28,
+    "front": "What is representation bias in medical AI training data?",
+    "back": "Representation bias occurs when training datasets underrepresent certain groups (women, minorities, elderly, disabled). Models trained on non-representative data perform worse in underrepresented groups when deployed, widening existing health disparities."
+  },
+  {
+    "id": 410,
+    "chapter": 28,
+    "front": "What is the eGFR race adjustment controversy and its AI implication?",
+    "back": "eGFR equations historically included a race coefficient that estimated higher kidney function in Black patients, delaying CKD diagnosis and transplant listing. AI models trained on eGFR with race adjustment perpetuate this bias; most guidelines now recommend race-free eGFR (CKD-EPI 2021)."
+  },
+  {
+    "id": 411,
+    "chapter": 28,
+    "front": "What is the 'label bias' problem in clinical AI?",
+    "back": "Label bias occurs when ground truth labels used to train AI models reflect existing disparities in clinical care (e.g., underdiagnosis of conditions in minority patients). AI trained on biased labels learns and perpetuates those diagnostic disparities."
+  },
+  {
+    "id": 412,
+    "chapter": 28,
+    "front": "What is intersectionality in AI health equity analysis?",
+    "back": "Intersectionality recognizes that individuals have overlapping identities (race, sex, disability, class) that interact to produce unique health experiences. AI bias analyses must examine intersectional subgroups (e.g., Black women) rather than single protected attributes to identify compound disparities."
+  },
+  {
+    "id": 413,
+    "chapter": 28,
+    "front": "What is the NIST AI Risk Management Framework (AI RMF)?",
+    "back": "NIST AI RMF (2023) provides a voluntary framework for managing AI risks across GOVERN, MAP, MEASURE, and MANAGE functions. In healthcare, it helps organizations assess bias, safety, and explainability risks throughout the AI development and deployment lifecycle."
+  },
+  {
+    "id": 414,
+    "chapter": 28,
+    "front": "What is algorithmic audit and how is it conducted for clinical AI?",
+    "back": "An algorithmic audit systematically evaluates AI model performance across demographic subgroups, compares predicted versus observed outcomes, and identifies disparities. It uses stratified AUC, calibration curves, and statistical tests for performance parity across groups."
+  },
+  {
+    "id": 415,
+    "chapter": 28,
+    "front": "What is the role of community engagement in equitable AI development?",
+    "back": "Community engagement involves including patients and community representatives from affected populations in AI dataset curation, model development, and governance. It ensures AI systems reflect the needs and values of the communities they serve and builds public trust."
+  },
+  {
+    "id": 416,
+    "chapter": 28,
+    "front": "What is AI and language access in health equity?",
+    "back": "AI clinical tools deployed only in English create disparities for limited-English-proficiency (LEP) patients. Equitable AI requires multilingual support, culturally adapted interfaces, and evaluation of performance parity across language and literacy subgroups."
+  },
+  {
+    "id": 417,
+    "chapter": 28,
+    "front": "What is the 'digital divide' and how does it affect AI remote monitoring equity?",
+    "back": "The digital divide is unequal access to smartphones, broadband internet, and digital health tools across socioeconomic groups. AI remote monitoring and telehealth tools disproportionately reach higher-income, more educated patients, potentially widening outcomes disparities."
+  },
+  {
+    "id": 418,
+    "chapter": 28,
+    "front": "What is the role of diverse training data in addressing health AI bias?",
+    "back": "Diverse training data ensures AI models perform equitably across demographic groups. Initiatives like MIDRC, the NIH All of Us program, and ECHO (Equity in Clinical AI) specifically expand underrepresented group representation in AI training datasets."
+  },
+  {
+    "id": 419,
+    "chapter": 28,
+    "front": "What is 'disparate impact' testing in clinical AI deployment?",
+    "back": "Disparate impact testing evaluates whether an AI tool's outcomes (e.g., positive prediction rates, referral rates) differ by more than the 80% threshold across demographic groups, applying the concept from employment discrimination law to clinical AI fairness evaluation."
+  },
+  {
+    "id": 420,
+    "chapter": 28,
+    "front": "What is the Health Equity Index (HEI) and how does AI support it?",
+    "back": "CMS's Health Equity Index measures disparities in quality measure performance across racial, ethnic, and socioeconomic groups within ACOs. AI analytics tools stratify quality measure reporting by demographics, identifying disparity targets for health equity improvement plans."
+  },
+  {
+    "id": 421,
+    "chapter": 29,
+    "front": "What are the four principles of biomedical ethics (Beauchamp and Childress) and how do they apply to AI?",
+    "back": "Autonomy (patient right to consent), Beneficence (AI should benefit patients), Non-maleficence (AI should not harm), and Justice (equitable distribution of AI benefits). These principles form the ethical framework for evaluating clinical AI deployment decisions."
+  },
+  {
+    "id": 422,
+    "chapter": 29,
+    "front": "What is the WHO Guidance on Ethics and Governance of AI for Health (2021)?",
+    "back": "The WHO 2021 guidance establishes six principles for ethical health AI: protecting autonomy, promoting well-being, ensuring transparency, fostering accountability, ensuring equity, and promoting AI that is responsive and sustainable across global health contexts."
+  },
+  {
+    "id": 423,
+    "chapter": 29,
+    "front": "What is the EU AI Act and when did it take effect?",
+    "back": "The EU AI Act (Regulation 2024/1689) entered into force in August 2024. It is the world's first comprehensive AI law, classifying AI by risk level (unacceptable, high, limited, minimal) and imposing transparency, accuracy, and human oversight requirements on high-risk AI systems."
+  },
+  {
+    "id": 424,
+    "chapter": 29,
+    "front": "What is 'informed consent for AI' and why is it debated?",
+    "back": "Informed consent for AI would notify patients that AI tools are used in their care, describe the AI's function and limitations, and obtain agreement. It is debated because most AI clinical tools are considered standard clinical tools rather than experimental interventions requiring special consent."
+  },
+  {
+    "id": 425,
+    "chapter": 29,
+    "front": "What is the AMA's policy on augmented intelligence in medicine?",
+    "back": "The AMA supports AI development that augments physician judgment, maintains physician accountability for AI-assisted decisions, requires algorithm transparency, mandates prospective clinical testing, and addresses bias and equity before deployment."
+  },
+  {
+    "id": 426,
+    "chapter": 29,
+    "front": "What is the concept of 'meaningful human oversight' in clinical AI governance?",
+    "back": "Meaningful human oversight means clinicians have sufficient information, time, and capability to evaluate AI recommendations before acting. It is distinct from nominal oversight where alerts are acknowledged without genuine evaluation, which perpetuates automation bias."
+  },
+  {
+    "id": 427,
+    "chapter": 29,
+    "front": "What is AI liability in clinical negligence and who bears responsibility?",
+    "back": "AI liability in clinical negligence remains unsettled. Current law places liability on the clinician who acts on AI recommendations, but legal scholars argue for expanding responsibility to AI developers and healthcare organizations that deploy unvalidated or biased AI tools."
+  },
+  {
+    "id": 428,
+    "chapter": 29,
+    "front": "What is explainability (XAI) and why is it an ethical requirement in clinical AI?",
+    "back": "Explainable AI provides human-interpretable reasons for model outputs. Ethically, patients and clinicians have a right to understand the basis of AI-assisted clinical decisions, and unexplainable 'black box' recommendations may undermine trust and informed consent."
+  },
+  {
+    "id": 429,
+    "chapter": 29,
+    "front": "What is the IEEE Ethically Aligned Design document for clinical AI?",
+    "back": "IEEE Ethically Aligned Design (2019) provides comprehensive guidelines for human-centric AI development, covering human rights, data governance, accountability, and transparency, serving as a reference for health systems designing AI governance frameworks."
+  },
+  {
+    "id": 430,
+    "chapter": 29,
+    "front": "What is the concept of 'right to explanation' under GDPR and its clinical AI implication?",
+    "back": "GDPR Article 22 restricts automated decisions with significant legal or similar effects and grants individuals the right to obtain human review and explanation of such decisions. This creates a mandate for explainable AI in clinical settings where automated recommendations directly affect patient care."
+  },
+  {
+    "id": 431,
+    "chapter": 29,
+    "front": "What is the principle of data minimization in AI ethics and its clinical application?",
+    "back": "Data minimization requires collecting and processing only the data necessary for the stated purpose. In clinical AI, it limits the scope of patient data accessed by AI tools to what is needed for the specific clinical function, reducing privacy risk and potential for misuse."
+  },
+  {
+    "id": 432,
+    "chapter": 29,
+    "front": "What is an AI ethics committee in a health system and what does it review?",
+    "back": "A health system AI ethics committee reviews proposed AI deployments for ethical concerns including fairness, transparency, privacy, patient consent implications, clinician autonomy, and population impact, providing an independent ethical governance layer beyond regulatory compliance."
+  },
+  {
+    "id": 433,
+    "chapter": 29,
+    "front": "What is the concept of 'algorithmic accountability' in clinical AI?",
+    "back": "Algorithmic accountability requires that organizations deploying AI can explain how it works, demonstrate it meets performance and equity standards, and accept responsibility for harm caused by AI outputs. It operationalizes ethical principles through institutional policies and audit mechanisms."
+  },
+  {
+    "id": 434,
+    "chapter": 29,
+    "front": "What is the Partnership on AI and its relevance to healthcare?",
+    "back": "The Partnership on AI is a multi-stakeholder organization including AI companies, civil society, and academic institutions that develops responsible AI practices. Its healthcare working group produces best practices for clinical AI transparency, safety, and equity."
+  },
+  {
+    "id": 435,
+    "chapter": 29,
+    "front": "What is the 'dual-use' problem in health AI ethics?",
+    "back": "Dual-use refers to the potential for health AI (e.g., patient risk models, diagnostic tools) to be repurposed for discriminatory insurance underwriting, employment decisions, or surveillance without patient consent, representing a significant ethical risk requiring governance safeguards."
+  },
+  {
+    "id": 436,
+    "chapter": 30,
+    "front": "What is the CMIO role and how has it evolved with clinical AI?",
+    "back": "The Chief Medical Information Officer (CMIO) oversees health IT strategy and EHR optimization. With clinical AI, the CMIO role has expanded to include AI governance, vendor evaluation, model validation oversight, and serving as the physician voice in digital health leadership."
+  },
+  {
+    "id": 437,
+    "chapter": 30,
+    "front": "What is a health system AI strategy and its core components?",
+    "back": "A health system AI strategy includes a vision aligned with organizational priorities, a governance structure, an AI use case roadmap, data infrastructure investment, workforce development, vendor management policies, and metrics for measuring AI program impact."
+  },
+  {
+    "id": 438,
+    "chapter": 30,
+    "front": "What is the triple aim and how does AI support it in health system leadership?",
+    "back": "The Triple Aim (IHI) targets better patient experience, better population health, and lower per capita cost. AI supports all three by improving diagnostic accuracy, enabling proactive population health management, and reducing avoidable utilization through predictive intervention."
+  },
+  {
+    "id": 439,
+    "chapter": 30,
+    "front": "What is a Center of Excellence (CoE) for AI in healthcare?",
+    "back": "An AI CoE is a centralized team providing AI expertise, infrastructure, and governance support to clinical departments. It prevents redundant AI initiatives across service lines, ensures standards compliance, and accelerates deployment by providing shared data pipelines and validation frameworks."
+  },
+  {
+    "id": 440,
+    "chapter": 30,
+    "front": "What is the 'pilot purgatory' problem in healthcare AI and how do leaders address it?",
+    "back": "Pilot purgatory is the failure to scale AI pilots to full deployment due to budget cycles, governance gaps, or lack of clinical ownership. Leaders address it by establishing clear scale-up criteria, executive sponsorship, and pre-defined deployment plans before a pilot begins."
+  },
+  {
+    "id": 441,
+    "chapter": 30,
+    "front": "What is change management in clinical AI implementation and why is it critical?",
+    "back": "Change management is the structured approach to transitioning individuals and teams to new AI-enabled workflows. It is critical because technical excellence alone does not drive adoption; clinician engagement, communication, training, and addressing concerns about autonomy and liability determine success."
+  },
+  {
+    "id": 442,
+    "chapter": 30,
+    "front": "What is AI in revenue cycle management (RCM)?",
+    "back": "AI in RCM automates coding (CDI, ICD-10), claims scrubbing, prior authorization, denial management, and underpayment detection. Health systems report 15-25% reduction in claims denials and significant coder productivity improvements with AI-assisted RCM tools."
+  },
+  {
+    "id": 443,
+    "chapter": 30,
+    "front": "What is the role of AI in supply chain management in hospitals?",
+    "back": "AI predicts demand for medical supplies, manages inventory replenishment, optimizes surgical supply kits, and detects waste and expiration patterns, reducing supply costs (which represent 25-30% of hospital operating expenses) and preventing supply shortages."
+  },
+  {
+    "id": 444,
+    "chapter": 30,
+    "front": "What is a Chief AI Officer (CAIO) in healthcare and what does the role entail?",
+    "back": "CAIO is an executive role (mandated for US federal agencies by EO 14110; emerging in health systems) responsible for AI strategy, governance, ethical oversight, and cross-departmental AI coordination. In healthcare, the CAIO translates AI capability into clinical and operational value."
+  },
+  {
+    "id": 445,
+    "chapter": 30,
+    "front": "What is AI in surgical robotics and how does it augment surgeon capability?",
+    "back": "AI in surgical robotics (e.g., Intuitive Surgical, Verb Surgical) provides tissue tension feedback, automated instrument tracking, surgical step recognition, tremor filtering, and performance metrics. AI does not replace the surgeon but augments precision and enables skills assessment."
+  },
+  {
+    "id": 446,
+    "chapter": 30,
+    "front": "What is strategic AI portfolio management in a health system?",
+    "back": "Strategic AI portfolio management prioritizes AI investments by clinical impact, feasibility, regulatory readiness, and alignment with organizational goals, using frameworks like the Gartner Hype Cycle to balance near-term deployable tools with longer-term transformative investments."
+  },
+  {
+    "id": 447,
+    "chapter": 30,
+    "front": "What is the role of AI in hospital operations optimization (OR scheduling, bed management)?",
+    "back": "AI predicts surgical case duration, optimizes OR scheduling to reduce cancellations and turnover time, forecasts inpatient census, and manages bed assignments dynamically. These operational AI tools improve throughput and reduce overtime labor costs."
+  },
+  {
+    "id": 448,
+    "chapter": 30,
+    "front": "What is the 'make versus buy' decision for AI infrastructure in health systems?",
+    "back": "Health systems must decide whether to build AI infrastructure (cloud data platforms, ML pipelines, GPU compute) internally or consume vendor-hosted AI-as-a-Service (AIaaS). Most opt for hybrid models: vendor AI tools for clinical applications and internal platforms for proprietary analytics."
+  },
+  {
+    "id": 449,
+    "chapter": 30,
+    "front": "What is the Quadruple Aim and how does AI support clinician wellbeing?",
+    "back": "The Quadruple Aim adds clinician wellbeing to the Triple Aim. AI reduces documentation burden (ambient AI scribes), automates administrative tasks (prior auth, inbox triaging), and provides decision support, directly reducing the time constraints and cognitive load that drive burnout."
+  },
+  {
+    "id": 450,
+    "chapter": 30,
+    "front": "What is health system AI maturity modeling?",
+    "back": "AI maturity models (e.g., HIMSS Digital Health Indicator, AMIA AI Maturity Model) assess an organization's AI readiness across dimensions: data infrastructure, governance, talent, workflow integration, and outcomes measurement, providing a roadmap for advancing AI capability."
+  },
+  {
+    "id": 451,
+    "chapter": 31,
+    "front": "What is the concept of 'AI clinician' and is it a realistic near-term prospect?",
+    "back": "An 'AI clinician' capable of fully autonomous diagnosis and treatment is not a near-term prospect. Current AI excels in narrow tasks. Future AI will increasingly augment clinicians across broader domains, but physical examination, therapeutic relationship, and ethical judgment will require human physicians for the foreseeable future."
+  },
+  {
+    "id": 452,
+    "chapter": 31,
+    "front": "What is ambient intelligence in the hospital and what does it enable?",
+    "back": "Ambient intelligence uses sensor networks (cameras, microphones, RFID) in clinical spaces to passively monitor patient safety (fall detection, hand hygiene compliance, delirium behaviors), reducing manual surveillance burden and enabling continuous safety monitoring."
+  },
+  {
+    "id": 453,
+    "chapter": 31,
+    "front": "What is the role of AI in pandemic preparedness?",
+    "back": "AI enables early outbreak detection from syndromic surveillance and social media, accelerates vaccine and antiviral design (as demonstrated by COVID-19 mRNA vaccine development), optimizes ventilator allocation, and predicts surge capacity needs, improving coordinated pandemic response."
+  },
+  {
+    "id": 454,
+    "chapter": 31,
+    "front": "What is AI in global health and what specific challenges does it address?",
+    "back": "AI addresses global health challenges including shortage of radiologists and pathologists in low-income countries, tuberculosis and malaria diagnosis from smartphone images, and automated cervical cancer screening from VIA images in settings without gynecologic pathology services."
+  },
+  {
+    "id": 455,
+    "chapter": 31,
+    "front": "What is quantum computing's potential impact on clinical AI?",
+    "back": "Quantum computing could accelerate drug discovery by simulating molecular interactions beyond classical computer capability, optimize complex genomic and proteomic data analysis, and solve certain ML optimization problems faster. Clinical applications are expected within 10-15 years."
+  },
+  {
+    "id": 456,
+    "chapter": 31,
+    "front": "What is brain-computer interface (BCI) AI and what clinical applications exist?",
+    "back": "BCI AI decodes neural signals from implanted or surface electrodes to restore motor function (BrainGate), enable communication in ALS patients (Neuralink, Synchron), or deliver closed-loop neurostimulation for epilepsy and depression."
+  },
+  {
+    "id": 457,
+    "chapter": 31,
+    "front": "What is the vision for AI in precision public health?",
+    "back": "Precision public health uses AI to tailor population-level interventions to individual risk profiles, integrating genomic, environmental, behavioral, and clinical data to deliver targeted prevention strategies rather than one-size-fits-all public health programs."
+  },
+  {
+    "id": 458,
+    "chapter": 31,
+    "front": "What is the concept of a 'learning health system' and how does AI enable it?",
+    "back": "A learning health system continuously improves care by embedding knowledge generation into clinical workflows. AI enables real-time performance analytics, rapid cycle improvement, and automatic model updating from operational data, creating a feedback loop between care delivery and system improvement."
+  },
+  {
+    "id": 459,
+    "chapter": 31,
+    "front": "What is AI in aging and longevity medicine?",
+    "back": "AI integrates multi-omic aging clocks (epigenetic, proteomic), wearable physiological data, and imaging biomarkers to estimate biological age, predict age-related disease onset, and identify senolytic therapy targets, advancing the emerging field of precision longevity medicine."
+  },
+  {
+    "id": 460,
+    "chapter": 31,
+    "front": "What is the role of AI in addressing antibiotic resistance as a future healthcare crisis?",
+    "back": "AI accelerates discovery of novel antibiotic scaffolds (as demonstrated by Halicin identified by MIT CDNN model published in Cell 2020), predicts antimicrobial resistance from genomic sequences, and optimizes antibiotic dosing to minimize resistance emergence."
+  },
+  {
+    "id": 461,
+    "chapter": 31,
+    "front": "What is the concept of 'AI for rare disease diagnosis' and what progress has been made?",
+    "back": "AI rare disease diagnosis tools (e.g., Face2Gene, Phenomizer, Mendelian) combine facial analysis, phenotype ontologies, and genomics to generate ranked differential diagnoses, reducing the 'diagnostic odyssey' average of 4-5 years for rare disease patients."
+  },
+  {
+    "id": 462,
+    "chapter": 31,
+    "front": "What is federated learning for global AI and its promise for underrepresented populations?",
+    "back": "Federated learning enables hospitals in low-income countries to contribute to global AI models without exporting sensitive patient data. This increases dataset diversity, improves AI performance for underrepresented populations, and shares AI capability without requiring centralized data infrastructure."
+  },
+  {
+    "id": 463,
+    "chapter": 31,
+    "front": "What is the 'AI winter' risk in clinical medicine and how can it be prevented?",
+    "back": "A clinical AI winter could occur if high-profile failures, regulatory overreach, or unmet expectations erode investment and trust. Prevention requires rigorous prospective clinical validation, transparent reporting of failures, honest communication of limitations, and governance frameworks that build sustainable trust."
+  },
+  {
+    "id": 464,
+    "chapter": 31,
+    "front": "What is AI in surgical training and assessment?",
+    "back": "AI video analysis of surgical video streams assesses trainee technical skills (suturing quality, instrument handling efficiency, error detection) using computer vision, enabling objective, continuous surgical education feedback beyond subjective attending assessment."
+  },
+  {
+    "id": 465,
+    "chapter": 31,
+    "front": "What is the future of AI in clinical trial design and execution?",
+    "back": "AI is transforming trials through adaptive trial designs with real-time interim analysis, AI-powered patient recruitment (NLP-based eligibility screening), synthetic control arms (virtual placebos), and continuous remote monitoring replacing scheduled site visits."
+  },
+  {
+    "id": 466,
+    "chapter": 32,
+    "front": "What are the four core domains of clinical informatics as a specialty?",
+    "back": "Clinical informatics encompasses health information systems (EHRs, FHIR), clinical decision support, health data analytics, and clinical informatics leadership/governance. Board certification is offered jointly by ABPM and ABPath/ABPeds since 2013."
+  },
+  {
+    "id": 467,
+    "chapter": 32,
+    "front": "What is ABPM clinical informatics board certification and who is eligible?",
+    "back": "The American Board of Preventive Medicine offers clinical informatics board certification to licensed US physicians who have completed an ACGME-accredited clinical informatics fellowship or have practice pathway eligibility based on qualifying experience in health IT."
+  },
+  {
+    "id": 468,
+    "chapter": 32,
+    "front": "What is HL7 FHIR R4 and why is it the current standard for EHR interoperability?",
+    "back": "FHIR Release 4 (published 2019) is the normative version mandated by ONC regulations (2020). It uses RESTful APIs, standardized Resources, and a defined conformance framework, making it the required standard for ONC-certified EHR patient access and data exchange APIs."
+  },
+  {
+    "id": 469,
+    "chapter": 32,
+    "front": "What is the difference between ICD-10-CM and ICD-10-PCS?",
+    "back": "ICD-10-CM (Clinical Modification) is the diagnosis coding system used on all US healthcare claims. ICD-10-PCS (Procedure Coding System) is used to code inpatient procedures in hospital billing. Both are maintained by CMS and used since October 2015."
+  },
+  {
+    "id": 470,
+    "chapter": 32,
+    "front": "What is CPT coding and who maintains it?",
+    "back": "CPT (Current Procedural Terminology) codes are maintained by the AMA and describe medical, surgical, and diagnostic services for outpatient and professional billing. CMS maps CPT codes to RVUs for Medicare payment under the MPFS fee schedule."
+  },
+  {
+    "id": 471,
+    "chapter": 32,
+    "front": "What is the difference between data integrity and data quality in clinical informatics?",
+    "back": "Data integrity ensures data is complete, consistent, and has not been altered inappropriately. Data quality encompasses accuracy, completeness, timeliness, and fitness for purpose. Both are essential for clinical AI models that depend on structured EHR data."
+  },
+  {
+    "id": 472,
+    "chapter": 32,
+    "front": "What is the PCDS (Primary Care Data Set) versus a secondary data use in clinical informatics?",
+    "back": "Primary data use refers to clinical data used for direct patient care (the EHR). Secondary data use refers to repurposing that data for research, quality improvement, billing, or AI model training, requiring de-identification or IRB approval and data use agreements."
+  },
+  {
+    "id": 473,
+    "chapter": 32,
+    "front": "What is the ONC Certification Criteria for Predictive Decision Support Interventions (pDSIs)?",
+    "back": "ONC's 2024 HTI-1 rule introduced requirements that EHR developers certify pDSIs (AI/ML predictive models) for transparency, including disclosing training data, performance across subgroups, and risk management practices, advancing algorithmic accountability in certified EHR products."
+  },
+  {
+    "id": 474,
+    "chapter": 32,
+    "front": "What is the UMLS (Unified Medical Language System)?",
+    "back": "UMLS is an NLM resource integrating over 200 biomedical vocabularies (SNOMED CT, RxNorm, ICD, LOINC, MeSH) into a unified metathesaurus. NLP systems use UMLS for concept normalization, enabling clinical text mining across heterogeneous terminology systems."
+  },
+  {
+    "id": 475,
+    "chapter": 32,
+    "front": "What is LOINC and how is it used in clinical informatics?",
+    "back": "LOINC (Logical Observation Identifiers Names and Codes) is a universal standard for identifying laboratory tests, clinical observations, and measurements. It enables interoperable exchange of lab results in FHIR Observation resources and is required in ONC-certified EHRs."
+  },
+  {
+    "id": 476,
+    "chapter": 32,
+    "front": "What is RxNorm and why is it essential for medication data interoperability?",
+    "back": "RxNorm is an NLM standard that provides normalized names for clinical drugs and maps to drug vocabularies used in many EHRs. It enables medication reconciliation across systems, drug interaction checking, and pharmacogenomics CDSS by providing a common drug identifier."
+  },
+  {
+    "id": 477,
+    "chapter": 32,
+    "front": "What is a business associate agreement (BAA) and when is it required for clinical AI?",
+    "back": "A BAA is a HIPAA-required contract between a covered entity and a business associate (e.g., an AI vendor) that handles PHI. It specifies permitted uses, safeguards, and breach reporting obligations. A BAA is required whenever a clinical AI vendor accesses or processes identifiable patient data."
+  },
+  {
+    "id": 478,
+    "chapter": 32,
+    "front": "What is the Meaningful Use (now Promoting Interoperability) program?",
+    "back": "Meaningful Use was a CMS program incentivizing EHR adoption and use through Medicare/Medicaid payments. It evolved into the Promoting Interoperability program under MIPS, which now requires patient access API (FHIR-based) measures for eligible clinicians and hospitals."
+  },
+  {
+    "id": 479,
+    "chapter": 32,
+    "front": "What is a clinical informatics fellowship and what does it train physicians to do?",
+    "back": "ACGME-accredited clinical informatics fellowships (2-year programs) train physician informaticists in EHR implementation, CDSS design, data analytics, AI governance, informatics research, and health IT leadership. Graduates typically become CMIOs, informaticists, or digital health executives."
+  },
+  {
+    "id": 480,
+    "chapter": 32,
+    "front": "What is clinical documentation improvement (CDI) and how does AI support it?",
+    "back": "CDI ensures clinical documentation accurately reflects the complexity and severity of patient illness for coding, reimbursement, and quality measurement. AI NLP tools query physicians for missing diagnoses (e.g., malnutrition, sepsis) and suggest ICD-10 codes to improve documentation specificity."
+  },
+  {
+    "id": 481,
+    "chapter": 1,
+    "front": "What is SNOMED CT and how does it differ from ICD-10?",
+    "back": "SNOMED CT (SNOMED Clinical Terms) is a comprehensive clinical ontology with over 350,000 concepts organized in a polyhierarchy, designed for clinical documentation. ICD-10 is a simpler classification system designed for administrative billing and statistics. SNOMED CT provides more clinical detail and maps to ICD-10."
+  },
+  {
+    "id": 482,
+    "chapter": 2,
+    "front": "What is the HPO (Human Phenotype Ontology) and its use in AI?",
+    "back": "HPO provides a standardized vocabulary of human phenotypic abnormalities. AI rare disease tools use HPO-coded phenotypes to query gene-phenotype databases (Phenomizer, Clinvar) for differential diagnosis generation in patients with complex, undiagnosed conditions."
+  },
+  {
+    "id": 483,
+    "chapter": 3,
+    "front": "What is a HIPAA Security Rule Technical Safeguard requirement relevant to clinical AI?",
+    "back": "HIPAA Security Rule Technical Safeguards require access controls (unique user IDs, automatic logoff), audit controls (activity logging), integrity controls (data alteration detection), and transmission security (encryption) for electronic PHI systems, including clinical AI platforms."
+  },
+  {
+    "id": 484,
+    "chapter": 4,
+    "front": "What is the difference between a de Novo authorization and 510(k) clearance for informatics AI tools?",
+    "back": "510(k) clearance demonstrates substantial equivalence to a legally marketed predicate device. De Novo authorization is for novel low-to-moderate risk devices with no predicate. Many first-in-class AI diagnostic tools (e.g., IDx-DR) use De Novo; subsequent similar tools use 510(k) citing the De Novo as predicate."
+  },
+  {
+    "id": 485,
+    "chapter": 5,
+    "front": "What is a health data exchange (HIE) and its types?",
+    "back": "An HIE enables electronic sharing of patient data across organizations. Types include directed exchange (secure messaging to known recipients), query-based exchange (patient record pull on demand), and consumer-mediated exchange (patient-controlled data sharing). AI benefits from HIE by accessing longitudinal multi-site records."
+  },
+  {
+    "id": 486,
+    "chapter": 6,
+    "front": "What is the CMS Interoperability and Patient Access final rule (2020)?",
+    "back": "The CMS Interoperability and Patient Access rule requires CMS-regulated payers (Medicare Advantage, Medicaid) to implement FHIR R4 APIs enabling patient access to their claims, clinical, and formulary data via third-party apps, accelerating payer-provider data exchange for AI population health tools."
+  },
+  {
+    "id": 487,
+    "chapter": 7,
+    "front": "What is HIPAA's definition of Protected Health Information (PHI)?",
+    "back": "PHI is individually identifiable health information created, received, maintained, or transmitted by a covered entity or business associate that relates to past, present, or future physical or mental health conditions, provision of care, or payment for care."
+  },
+  {
+    "id": 488,
+    "chapter": 8,
+    "front": "What is the IRB (Institutional Review Board) role in clinical AI research?",
+    "back": "An IRB reviews clinical AI research involving human subjects to ensure ethical protections (informed consent, risk minimization, equitable subject selection). Studies using de-identified EHR data for model development may qualify for IRB exemption, while studies involving prospective data collection require full review."
+  },
+  {
+    "id": 489,
+    "chapter": 9,
+    "front": "What is the difference between clinical decision support rule-based alerts and ML-based alerts in an EHR?",
+    "back": "Rule-based alerts fire on hard-coded logic (e.g., eGFR < 30 + nephrotoxic drug). ML-based alerts use trained models to generate probabilistic scores that trigger alerts at defined thresholds. ML alerts are harder to interpret but can integrate more variables and detect complex patterns."
+  },
+  {
+    "id": 490,
+    "chapter": 10,
+    "front": "What is the role of ICD-10 in AI model development for clinical informatics research?",
+    "back": "ICD-10 codes are used to define patient cohorts, outcomes, and comorbidities in AI model development from claims or structured EHR data. Validated ICD-10 phenotype algorithms (from PheKB or eMERGE network) ensure that AI training labels accurately reflect clinical diagnoses."
+  },
+  {
+    "id": 491,
+    "chapter": 11,
+    "front": "What is a Clinical Data Repository (CDR) and how does it differ from a data warehouse?",
+    "back": "A CDR stores real-time operational clinical data from multiple source systems for immediate clinical use (e.g., active patient records). A data warehouse stores historical, transformed data optimized for analytical queries and AI model training, with less emphasis on real-time currency."
+  },
+  {
+    "id": 492,
+    "chapter": 12,
+    "front": "What is the Arden Syntax and its use in clinical decision support?",
+    "back": "Arden Syntax is an HL7 standard language for writing clinical decision support rules as Medical Logic Modules (MLMs). It is one of the oldest CDS knowledge representation formats, though it has largely been superseded by CQL (Clinical Quality Language) and CDS Hooks for modern EHR integration."
+  },
+  {
+    "id": 493,
+    "chapter": 13,
+    "front": "What is AMIA (American Medical Informatics Association) and its role in clinical informatics education?",
+    "back": "AMIA is the professional organization for biomedical and health informatics in the US. It publishes the Journal of the American Medical Informatics Association (JAMIA), offers the AMIA 10x10 clinical informatics training program, and advocates for informatics as a recognized medical specialty."
+  },
+  {
+    "id": 494,
+    "chapter": 14,
+    "front": "What is clinical quality language (CQL) and how does it enable AI-driven quality measurement?",
+    "back": "CQL (Clinical Quality Language) is an HL7 standard for expressing clinical quality measures and decision support logic in a human-readable, machine-executable format. It enables AI-driven quality measures to be specified, shared, and executed consistently across different EHR platforms."
+  },
+  {
+    "id": 495,
+    "chapter": 15,
+    "front": "What is the PCORI (Patient-Centered Outcomes Research Institute) and its relevance to clinical AI evaluation?",
+    "back": "PCORI funds comparative effectiveness research emphasizing patient-centered outcomes. It supports clinical AI evaluation studies that measure real-world patient outcomes (quality of life, patient experience, functional status) rather than surrogate technical metrics like AUC alone."
+  },
+  {
+    "id": 496,
+    "chapter": 16,
+    "front": "What is the QCDR (Qualified Clinical Data Registry) and how does it use AI?",
+    "back": "A QCDR is a CMS-approved registry that collects and submits quality measure data on behalf of clinicians for MIPS reporting. AI NLP and analytics tools automate data extraction from EHRs for QCDR reporting, reducing manual abstraction burden and improving measure accuracy."
+  },
+  {
+    "id": 497,
+    "chapter": 17,
+    "front": "What is a clinical natural language processing (NLP) evaluation framework?",
+    "back": "NLP evaluation uses precision, recall, F1 score, and inter-annotator agreement (Cohen's kappa) against a gold-standard annotated corpus. For clinical NLP, evaluation must be stratified by note type, clinical setting, and patient demographics to assess real-world performance."
+  },
+  {
+    "id": 498,
+    "chapter": 18,
+    "front": "What is population health analytics and how does it differ from clinical analytics?",
+    "back": "Population health analytics examines health outcomes and determinants across defined patient panels or geographic populations. Clinical analytics focuses on individual patient care metrics. AI enables population health analytics by processing millions of records to identify trends, disparities, and intervention opportunities at scale."
+  },
+  {
+    "id": 499,
+    "chapter": 19,
+    "front": "What is the eMERGE Network and its contribution to AI clinical informatics?",
+    "back": "eMERGE (Electronic Medical Records and Genomics) is an NIH-funded consortium linking genomic biobanks with EHR data across multiple institutions. It developed validated EHR phenotyping algorithms and genomic-phenotypic association tools, serving as a model for AI-enabled precision medicine at scale."
+  },
+  {
+    "id": 500,
+    "chapter": 20,
+    "front": "What is the Clinical Informatics board exam format and key content areas?",
+    "back": "The clinical informatics board exam (ABPM/ABPath) consists of approximately 200 multiple-choice questions covering health information systems, CDSS, analytics and data science, leadership and management, and health information exchange. Key content areas include EHR standards (FHIR, HL7), AI/ML applications, regulatory landscape, and governance."
+  }
+]

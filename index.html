@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in Medicine Flashcards — Uprising Test Prep</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-brand">
+    <span class="brand-aim">AIM</span><span class="brand-dot">·</span><span class="brand-year">2026</span>
+    <span class="brand-label">Flashcards</span>
+  </div>
+  <div class="header-meta">
+    <span id="progress-text">Loading...</span>
+  </div>
+</header>
+
+<main class="app-main">
+
+  <div class="controls-top">
+    <select id="chapter-filter" class="chapter-select">
+      <option value="all">All Chapters</option>
+    </select>
+    <button class="btn-shuffle" id="btn-shuffle">&#8635; Shuffle</button>
+    <button class="btn-reset-order" id="btn-reset">&#8646; Reset Order</button>
+  </div>
+
+  <div class="card-scene" id="card-scene">
+    <div class="card" id="flashcard">
+      <div class="card-face card-front" id="card-front">
+        <div class="card-chapter-badge" id="card-chapter"></div>
+        <div class="card-content" id="card-question">Loading flashcards...</div>
+        <div class="card-hint">Tap to reveal answer</div>
+      </div>
+      <div class="card-face card-back" id="card-back">
+        <div class="card-chapter-badge" id="card-chapter-back"></div>
+        <div class="card-content" id="card-answer"></div>
+        <div class="card-hint">Tap to flip back</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-nav" id="btn-prev">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10l6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Previous
+    </button>
+    <div class="card-counter" id="card-counter">1 / 500</div>
+    <button class="btn-nav" id="btn-next">
+      Next
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="keyboard-hint">Use ← → arrow keys to navigate &bull; Space to flip</div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
